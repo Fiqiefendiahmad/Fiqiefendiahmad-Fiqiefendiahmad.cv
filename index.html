@@ -6,6 +6,17 @@
     <title>My Professional CV</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- SEO Metadata -->
+    <meta name="description" content="AHMAD FIQI EFENDI - IT Database Administrator, Android Developer, and Video Editor from Jakarta, Indonesia. View my portfolio, skills, and experience.">
+    <meta name="keywords" content="AHMAD FIQI EFENDI, CV, Resume, Database Administrator, Android Developer, Video Editor, Jakarta, Indonesia">
+    <meta name="author" content="AHMAD FIQI EFENDI">
+    <meta property="og:title" content="AHMAD FIQI EFENDI - Professional CV">
+    <meta property="og:description" content="IT Database Administrator, Android Developer, and Video Editor from Jakarta, Indonesia.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://YourGitHubUsername.github.io/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="css/project-styles.css">
 </head>
 <body>
     <header>
@@ -175,35 +186,26 @@
     <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-title">Projects</h2>
+            
+            <!-- Filtering buttons -->
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="android">Android Apps</button>
+                <button class="filter-btn" data-filter="web">Web Projects</button>
+            </div>
+            
+            <!-- Project grid - will be populated by play-store-apps.js -->
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-code"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Project Name</h3>
-                        <p>Brief description of the project, your role, and the technologies used.</p>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> View Project</a>
-                        </div>
-                    </div>
+                <div class="loading-indicator">
+                    <i class="fas fa-spinner fa-spin"></i> Loading projects...
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-code"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Project Name</h3>
-                        <p>Brief description of the project, your role, and the technologies used.</p>
-                        <div class="project-links">
-                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> View Project</a>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            
+            <!-- View all link - will be updated by play-store-apps.js -->
+            <div class="view-all-container">
+                <a href="https://play.google.com/store/apps/developer?id=AFN_Studio" target="_blank" class="btn btn-outline">
+                    <i class="fab fa-google-play"></i> View All Apps on Google Play
+                </a>
             </div>
         </div>
     </section>
@@ -239,8 +241,8 @@
                     <h3>Connect With Me</h3>
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/Fiqiefendiahmad" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://play.google.com/store/apps/developer?id=AFN_Studio" class="social-link"><i class="fab fa-google-play"></i></a>
                     </div>
                 </div>
             </div>
@@ -253,6 +255,9 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="js/script.js"></script>
+    <script src="js/project-filter.js"></script>
+    <script src="js/play-store-apps.js"></script>
 </body>
 </html>

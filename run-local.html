@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Run CV Website Locally</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #c7000b;
+        }
+        .method {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-left: 5px solid #c7000b;
+        }
+        code {
+            background-color: #f0f0f0;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        pre {
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .note {
+            background-color: #fffde7;
+            padding: 15px;
+            border-left: 5px solid #ffd600;
+            margin: 15px 0;
+        }
+        .cmd-method {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: #e6f7ff;
+            border-left: 5px solid #0078d4;
+        }
+        .cmd {
+            font-weight: bold;
+            color: #0078d4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Running Your CV Website Locally</h1>
+    
+    <p>There are several simple ways to run your website locally for testing. Choose the method that works best for you:</p>
+
+    <div class="cmd-method">
+        <h2><span class="cmd">CMD</span>: Windows Command Prompt Method</h2>
+        <ol>
+            <li>Press <code>Win + R</code>, type <code>cmd</code> and press Enter to open Command Prompt</li>
+            <li>Navigate to your project folder:
+                <pre>cd c:\Users\THE\Documents\Project\single</pre>
+            </li>
+            <li>You have several options to run a local server:
+                <ul>
+                    <li>Using Python (if installed):
+                        <pre>python -m http.server 8000</pre>
+                    </li>
+                    <li>Using Node.js (if installed):
+                        <pre>npx http-server</pre>
+                    </li>
+                    <li>Using a simple batch file (create one below):
+                        <pre>run-server.bat</pre>
+                    </li>
+                </ul>
+            </li>
+            <li>Open your browser and navigate to <code>http://localhost:8000</code> or <code>http://127.0.0.1:8000</code></li>
+        </ol>
+        <div class="note">
+            <strong>Create a simple batch file:</strong> Create a new text file named <code>run-server.bat</code> in your project folder with the following content:
+            <pre>
+@echo off
+echo Starting local server for CV website...
+echo Visit http://localhost:8000 in your browser
+echo Press Ctrl+C to stop the server
+
+REM Try Python first
+python -m http.server 8000
+if %errorlevel% equ 0 goto :end
+
+REM Try Node.js if Python fails
+npx http-server
+if %errorlevel% equ 0 goto :end
+
+echo Unable to start server. Please install Python or Node.js.
+pause
+
+:end
+            </pre>
+            <p>Double-click this batch file to start your server without typing commands each time.</p>
+        </div>
+    </div>
+
+    <div class="method">
+        <h2>Method 1: Using VS Code Live Server</h2>
+        <ol>
+            <li>Install <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> if you don't have it already</li>
+            <li>Open VS Code and install the "Live Server" extension:
+                <ul>
+                    <li>Click on Extensions icon in the left sidebar (or press Ctrl+Shift+X)</li>
+                    <li>Search for "Live Server"</li>
+                    <li>Click "Install" on the extension by Ritwick Dey</li>
+                </ul>
+            </li>
+            <li>Open your project folder in VS Code</li>
+            <li>Right-click on your index.html file and select "Open with Live Server"</li>
+            <li>Your site will open in your default browser at <code>http://127.0.0.1:5500/</code> (or similar port)</li>
+        </ol>
+        <p>The page will automatically reload whenever you make changes to your files.</p>
+    </div>
+
+    <div class="method">
+        <h2>Method 2: Using Python (Simple HTTP Server)</h2>
+        <ol>
+            <li>Open a command prompt or terminal</li>
+            <li>Navigate to your project directory:
+                <pre>cd c:\Users\THE\Documents\Project\single</pre>
+            </li>
+            <li>If you have Python installed (most systems do), run one of these commands:
+                <pre>
+# For Python 3
+python -m http.server
+
+# For Python 2
+python -m SimpleHTTPServer
+                </pre>
+            </li>
+            <li>Open your browser and go to <code>http://localhost:8000/</code></li>
+        </ol>
+    </div>
+
+    <div class="method">
+        <h2>Method 3: Using Node.js http-server</h2>
+        <ol>
+            <li>Install <a href="https://nodejs.org/" target="_blank">Node.js</a> if you don't have it</li>
+            <li>Open a command prompt or terminal</li>
+            <li>Install http-server globally:
+                <pre>npm install -g http-server</pre>
+            </li>
+            <li>Navigate to your project directory:
+                <pre>cd c:\Users\THE\Documents\Project\single</pre>
+            </li>
+            <li>Start the server:
+                <pre>http-server</pre>
+            </li>
+            <li>Open your browser and go to <code>http://localhost:8080/</code></li>
+        </ol>
+    </div>
+
+    <div class="method">
+        <h2>Method 4: Just Open HTML File (Simplest)</h2>
+        <p>You can directly open your HTML file in a browser:</p>
+        <ol>
+            <li>Navigate to your project folder using File Explorer</li>
+            <li>Right-click on your index.html file</li>
+            <li>Select "Open with" and choose your preferred browser</li>
+        </ol>
+        <div class="note">
+            <strong>Note:</strong> This method might have limitations with some JavaScript features and AJAX requests due to browser security restrictions.
+        </div>
+    </div>
+
+    <div class="note">
+        <p><strong>Important:</strong> When using a local server, make sure all file paths in your HTML, CSS and JavaScript files are relative paths, not absolute paths.</p>
+    </div>
+</body>
+</html>

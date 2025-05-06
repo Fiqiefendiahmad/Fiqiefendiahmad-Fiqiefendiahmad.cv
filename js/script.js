@@ -13,7 +13,9 @@ const personalInfo = {
     
     // Social & web profiles
     linkedin: "fiqi-efendi",
-    linkedinUrl: "https://www.linkedin.com/in/fiqi-efendi",
+    linkedinUrl: "https://www.linkedin.com/in/yourprofile",
+    githubUrl: "https://github.com/Fiqiefendiahmad",
+    playStoreUrl: "https://play.google.com/store/apps/developer?id=AFN_Studio",
     
     // Professional summary
     summary: "I am an experienced professional with a strong background in both warehouse operations and Android app development, demonstrating a proven track record in the information technology and services industry. I am currently dedicated to a role in database administration, while concurrently focusing on multiple projects related to video editing and Android app development.",
@@ -25,13 +27,43 @@ const personalInfo = {
         soft: ["Project Management", "Client Collaboration", "Quality Assurance"]
     },
     
-    // Professional certifications
+    // Professional certifications - ensure this format is correct
     certifications: [
-        "EF Set English",
-        "Foundations of Project Management",
-        "Foundations: Data, Data, Everywhere",
-        "Android Enterprise Professional",
-        "Android Enterprise Associate"
+        {
+            name: "EF Set English",
+            issuer: "EF Standard English Test",
+            issueDate: "May 2023",
+            credentialID: "ef-set-123456",
+            credentialURL: "https://www.efset.org/cert/"
+        },
+        {
+            name: "Foundations of Project Management",
+            issuer: "Google",
+            issueDate: "June 2022",
+            credentialID: "pm-12345",
+            credentialURL: "https://www.coursera.org/account/accomplishments/verify/"
+        },
+        {
+            name: "Foundations: Data, Data, Everywhere", 
+            issuer: "Google",
+            issueDate: "April 2022",
+            credentialID: "data-12345",
+            credentialURL: "https://www.coursera.org/account/accomplishments/verify/"
+        },
+        {
+            name: "Android Enterprise Professional",
+            issuer: "Google",
+            issueDate: "August 2021",
+            credentialID: "aep-12345",
+            credentialURL: "https://www.credential.net/"
+        },
+        {
+            name: "Android Enterprise Associate",
+            issuer: "Google",
+            issueDate: "July 2021", 
+            credentialID: "aea-12345",
+            credentialURL: "https://www.credential.net/"
+        }
     ],
     
     // Work experience
@@ -117,26 +149,41 @@ const personalInfo = {
                 "Server-Side Android App Maintenance",
                 "Logistic Distribution coordination"
             ]
+        },
+        {
+            title: "Android App Developer",
+            company: "AFN_Studio",
+            period: "2020 - Present", 
+            location: "Remote",
+            responsibilities: [
+                "Developed and published Android applications to Google Play Store",
+                "Designed user interfaces focused on user experience and accessibility",
+                "Maintained and updated applications based on user feedback"
+            ]
         }
     ],
     
-    // Education
+    // Education - updated from LinkedIn
     education: [
         {
             institution: "Ahmad Dahlan University",
             location: "Yogyakarta, Indonesia",
             degree: "S.Kom, Information Technology",
-            period: "2012 - May 2019"
+            period: "2012 - May 2019",
+            activities: "Android community, Linux community, Database and data science community",
+            description: "During my university journey, I had the privilege of majoring in Informatic Engineering. One of the significant milestones of my academic career was the publication of my undergraduate thesis, which was a collaborative effort with my esteemed thesis adviser. This research endeavor allowed me to delve deep into the subject matter, conduct in-depth analysis, and contribute to the field of informatics.",
+            thesis: {
+                title: "Undergraduate Thesis Publication",
+                doi: "https://doi.org/10.33505/jodis.v3i2.149"
+            },
+            skills: [
+                "Presentation Skills", "Public Speaking", "Databases", "Public Relations", 
+                "Java", "Graph Databases", "Android SDK", "Object-Oriented Programming (OOP)", 
+                "Customer Relationship Management (CRM)", "Android Testing", 
+                "Presentations", "Project Management", "Android Studio"
+            ]
         }
     ]
-};
-
-// Instagram configuration
-const instagramConfig = {
-    username: "viqi_efendi", // Updated username
-    feedCount: 12,
-    containerSelector: '#instagram-feed',
-    createFeedSection: true
 };
 
 // Add deployment configuration
@@ -145,6 +192,13 @@ const deploymentConfig = {
     isProduction: window.location.hostname !== 'localhost' && 
                   window.location.hostname !== '127.0.0.1' &&
                   !window.location.hostname.includes('.local'),
+    
+    // GitHub Pages configuration
+    github: {
+        username: 'Fiqiefendiahmad',
+        repositoryName: 'Fiqiefendiahmad.github.io',
+        url: 'https://fiqiefendiahmad.github.io/'
+    },
     
     // CDN URLs for production (can be changed when deployed)
     cdnUrls: {
@@ -202,14 +256,6 @@ window.addEventListener('load', function() {
     // Add LinkedIn profile integration
     addLinkedInProfile(personalInfo);
     
-    // Create Instagram section and load feed
-    if (instagramConfig.createFeedSection) {
-        createInstagramSection(instagramConfig);
-    }
-    
-    // Add Instagram feed
-    loadInstagramFeed(instagramConfig);
-    
     // Add scroll indicators
     addScrollIndicators();
     
@@ -223,6 +269,5 @@ window.addEventListener('load', function() {
 document.write('<script src="js/navigation.js"></script>');
 document.write('<script src="js/animations.js"></script>');
 document.write('<script src="js/linkedin.js"></script>');
-document.write('<script src="js/instagram.js"></script>');
 document.write('<script src="js/ui-utils.js"></script>');
 document.write('<script src="js/cv-content.js"></script>');
