@@ -186,6 +186,27 @@ const personalInfo = {
     ]
 };
 
+// Add API configuration
+const apiConfig = {
+    linkedIn: {
+        enabled: true,
+        useStaticFallback: true,
+        // Credentials should be in environment variables in production
+        clientId: '', // LinkedIn API client ID
+        clientSecret: '', // Keep this secure, preferably on server-side
+    },
+    playStore: {
+        enabled: true,
+        useStaticFallback: true,
+        // Google Play Developer API credentials
+        developerAccount: 'AFN_Studio',
+    },
+    // Rate limiting to avoid API quota issues
+    rateLimiting: {
+        cacheDuration: 3600 * 1000, // 1 hour in milliseconds
+    }
+};
+
 // Add deployment configuration
 const deploymentConfig = {
     // Automatically detect if running on production or local environment
@@ -253,8 +274,14 @@ window.addEventListener('load', function() {
         renderCVContent(personalInfo);
     }
     
-    // Add LinkedIn profile integration
-    addLinkedInProfile(personalInfo);
+    // Add LinkedIn profile integration - will try API first, then fall back to static
+    if (apiConfig.linkedIn.enabled && typeof addLinkedInProfile === 'function') {
+        addLinkedInProfile(personalInfo);
+    } else {
+        console.log('LinkedIn API integration disabled or function missing');
+    }
+    
+    // Play Store apps are loaded in their own module
     
     // Add scroll indicators
     addScrollIndicators();

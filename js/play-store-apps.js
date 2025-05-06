@@ -62,17 +62,71 @@ function loadPlayStoreApps() {
     // Clear any existing content
     projectsGrid.innerHTML = '';
     
-    // Add actual Play Store apps
-    playStoreApps.apps.forEach((app, index) => {
-        // Only show first 4 apps in grid to maintain layout
-        if (index < 4) {
-            const appCard = createAppCard(app);
-            projectsGrid.appendChild(appCard);
+    // Try to fetch from Play Store API first
+    fetchPlayStoreApps()
+        .then(apps => {
+            if (apps && apps.length > 0) {
+                // Update our static apps data with fresh data
+                playStoreApps.apps = apps;
+                console.log('Loaded Play Store apps dynamically:', apps.length);
+            } else {
+                console.log('Using fallback static app data');
+            }
+            
+            // Add apps to grid (either dynamic or static)
+            playStoreApps.apps.forEach((app, index) => {
+                // Only show first 4 apps in grid to maintain layout
+                if (index < 4) {
+                    const appCard = createAppCard(app);
+                    projectsGrid.appendChild(appCard);
+                }
+            });
+            
+            // Update view all link with accurate count
+            updateViewAllLink();
+        })
+        .catch(error => {
+            console.error('Failed to load Play Store apps dynamically:', error);
+            
+            // Fallback to static data
+            playStoreApps.apps.forEach((app, index) => {
+                if (index < 4) {
+                    const appCard = createAppCard(app);
+                    projectsGrid.appendChild(appCard);
+                }
+            });
+            
+            updateViewAllLink();
+        });
+}
+
+// Function to fetch apps from Play Store
+async function fetchPlayStoreApps() {
+    try {
+        // Since direct access to Play Store API requires authorization and a backend,
+        // we'll use a proxy service or our own backend API that handles the authentication
+        const response = await fetch('https://your-backend-api.com/play-store-apps?developer=AFN_Studio');
+        
+        if (!response.ok) {
+            throw new Error('Failed to fetch Play Store apps');
         }
-    });
-    
-    // Update view all link with accurate count
-    updateViewAllLink();
+        
+        const data = await response.json();
+        
+        // Transform the API response to match our app structure
+        return data.apps.map(app => ({
+            name: app.title,
+            description: app.description || app.summary,
+            icon: app.icon || `asset/projects/${app.packageName}.webp`,
+            url: `https://play.google.com/store/apps/details?id=${app.packageName}`,
+            category: app.category || 'App',
+            tags: app.tags || [app.category],
+            installs: app.installs || 'New'
+        }));
+    } catch (error) {
+        console.warn('Error fetching Play Store apps:', error);
+        return null; // Return null to indicate failure
+    }
 }
 
 // Function to create an app card

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkedIn Authentication</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .success {
+            color: green;
+            font-weight: bold;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>LinkedIn Authentication</h1>
+    <div id="status">Processing authentication...</div>
+    
+    <script>
+        // Extract code and state from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        const state = urlParams.get('state');
+        const error = urlParams.get('error');
+        const statusElement = document.getElementById('status');
+        
+        if (error) {
+            statusElement.innerHTML = `<p class="error">Authentication failed: ${error}</p>`;
+            statusElement.innerHTML += '<p>You can close this window.</p>';
+        } else if (code && state) {
+            statusElement.innerHTML = '<p class="success">Authentication successful!</p>';
+            statusElement.innerHTML += '<p>Getting your profile information...</p>';
+            
+            // In a real application, we'd exchange the code for an access token here
+            // This would typically be done on a server to keep your client_secret secure
+            
+            // Example of what this would look like (not functional in client-side code):
+            /*
+            fetch('https://www.linkedin.com/oauth/v2/accessToken', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: new URLSearchParams({
+                    grant_type: 'authorization_code',
+                    code: code,
+                    redirect_uri: window.location.origin + '/linkedin-callback.html',
+                    client_id: 'YOUR_CLIENT_ID',
+                    client_secret: 'YOUR_CLIENT_SECRET' // This should be kept secure
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Store the token
+                localStorage.setItem('linkedInAccessToken', data.access_token);
+                statusElement.innerHTML += '<p class="success">Login successful!</p>';
+                statusElement.innerHTML += '<p>You can close this window now.</p>';
+                
+                // Notify the opener window
+                if (window.opener && !window.opener.closed) {
+                    window.opener.postMessage({ type: 'linkedInAuthSuccess' }, window.location.origin);
+                }
+            })
+            .catch(error => {
+                statusElement.innerHTML = `<p class="error">Error getting access token: ${error.message}</p>`;
+            });
+            */
+            
+            // For this demo, we'll just simulate success
+            setTimeout(() => {
+                statusElement.innerHTML += '<p class="success">Profile loaded successfully!</p>';
+                statusElement.innerHTML += '<p>You can close this window now.</p>';
+                
+                // Notify the opener window
+                if (window.opener && !window.opener.closed) {
+                    window.opener.postMessage({ type: 'linkedInAuthSuccess' }, window.location.origin);
+                    setTimeout(() => window.close(), 2000);
+                }
+            }, 1500);
+        } else {
+            statusElement.innerHTML = '<p class="error">Invalid response from LinkedIn.</p>';
+            statusElement.innerHTML += '<p>You can close this window.</p>';
+        }
+    </script>
+</body>
+</html>
