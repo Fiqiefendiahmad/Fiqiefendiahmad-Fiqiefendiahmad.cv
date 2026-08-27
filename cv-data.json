@@ -1,0 +1,93 @@
+{
+  "name": "Ahmad Fiqi Efendi",
+  "role": "IT Database Administrator · Android Developer · IT Project Lead",
+  "contact": {
+    "email": "fiqiefendi13@gmail.com",
+    "phone": "+62 851 5646 2398",
+    "linkedin": "linkedin.com/in/fiqi-efendi",
+    "github": "github.com/Fiqiefendiahmad",
+    "location": "Jakarta, Indonesia"
+  },
+  "summary": "IT professional with hands-on experience in Oracle/MySQL database administration, Android application development, and technical project leadership. Skilled in backend development, cloud infrastructure, AI integration, and automation. Proven ability to lead cross-functional teams and deliver scalable solutions from concept to production.",
+  "experience": [
+    {
+      "role": "IT Database Administrator",
+      "company": "PT. INFOMEDIA NUSANTARA",
+      "period": "Jun 2023 — Present",
+      "location": "Jakarta, Indonesia · Client: Maybank",
+      "highlights": [
+        "24/7 performance monitoring and database availability management for Oracle databases",
+        "Slow query analysis, blocking query analysis, and AWR report generation",
+        "Backup monitoring, job scheduling oversight, and incident troubleshooting",
+        "Performance reporting and capacity planning for production systems"
+      ]
+    },
+    {
+      "role": "IT Project Lead & Mobile Application Developer",
+      "company": "PT. TURGA BERKAH KUBRA",
+      "period": "2025 — 2026",
+      "location": "",
+      "highlights": [
+        "Led full lifecycle of Android application from planning through production deployment",
+        "Coordinated cross-functional teams and delivered scalable mobile solution",
+        "Managed project architecture, development, testing, and production support"
+      ]
+    },
+    {
+      "role": "Android Developer (Freelance)",
+      "company": "Various Clients",
+      "period": "2023 — 2024",
+      "location": "",
+      "highlights": [
+        "Developed Android applications for election result tracking, laundry services, and educational platforms",
+        "Built REST API backends and integrated Firebase services",
+        "Implemented real-time data synchronization and offline-first architectures"
+      ]
+    }
+  ],
+  "skills": [
+    { "category": "Databases", "items": "Oracle, MySQL, SQL, AWR, Performance Tuning" },
+    { "category": "Mobile", "items": "Android, Java, Kotlin, Flutter, Firebase" },
+    { "category": "Backend", "items": "Spring Boot, Python/Flask, Go, REST APIs" },
+    { "category": "Infrastructure", "items": "Linux, Ubuntu, Docker, GCP, Git, Nginx" },
+    { "category": "AI / Automation", "items": "Gemini, RAG, Langflow, Chroma, Telegram Bots" },
+    { "category": "Languages", "items": "Kotlin, Java, Python, Go, JavaScript, SQL" }
+  ],
+  "projects": [
+    {
+      "title": "Hystory — Android Application",
+      "description": "Led development of a mobile application for PT. Turga Berkah Kubra, managing full lifecycle from architecture to production deployment.",
+      "tech": "Kotlin · Android · REST API · Firebase · GCP · Docker"
+    },
+    {
+      "title": "Tan Malaka AI — RAG Research Assistant",
+      "description": "Built a historical research assistant using RAG architecture with vector embeddings and Gemini for grounded, source-backed answers.",
+      "tech": "Langflow · Gemini · RAG · Chroma · Embeddings"
+    },
+    {
+      "title": "Election Result Tracking — Android App",
+      "description": "Real-time election result tracking application with live data feeds and interactive dashboards.",
+      "tech": "Android · Java · REST API"
+    },
+    {
+      "title": "iWash Laundry Services — Mobile App",
+      "description": "On-demand laundry service platform with order tracking, payment integration, and real-time notifications.",
+      "tech": "Android · Backend API · Firebase"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor's Degree in Information Technology",
+      "school": "Universitas Amir Hamzah (UNESA)",
+      "year": "Graduated 2024"
+    }
+  ],
+  "certifications": [
+    { "title": "Introduction to Cybersecurity", "issuer": "IBM SkillsBuild", "year": "2025" },
+    { "title": "AI Fundamentals", "issuer": "IBM SkillsBuild", "year": "2025" },
+    { "title": "Introduction to Data Science", "issuer": "IBM SkillsBuild", "year": "2025" },
+    { "title": "Cloud Computing Fundamentals", "issuer": "IBM SkillsBuild", "year": "2025" },
+    { "title": "IoT Essentials", "issuer": "IBM SkillsBuild", "year": "2025" },
+    { "title": "Blockchain Essentials", "issuer": "IBM SkillsBuild", "year": "2025" }
+  ]
+}
