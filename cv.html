@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV — Ahmad Fiqi Efendi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-font-smoothing: antialiased; }
+    body {
+      font-family: var(--font-body);
+      color: #1a1a1a;
+      background: #fff;
+      line-height: 1.5;
+      font-size: 10pt;
+    }
+
+    .cv {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 48px;
+    }
+
+    /* Print */
+    @media print {
+      body { background: #fff; }
+      .cv { max-width: 100%; padding: 24px 32px; }
+      .no-print { display: none !important; }
+    }
+
+    /* Download bar */
+    .download-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #141414;
+      padding: 12px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .download-bar__left {
+      color: #999;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .download-bar__actions {
+      display: flex;
+      gap: 12px;
+    }
+    .download-bar__btn {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 8px 20px;
+      border: 1px solid #444;
+      color: #f0ede8;
+      background: transparent;
+      cursor: pointer;
+      transition: all 200ms ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .download-bar__btn:hover {
+      border-color: #d4a017;
+      color: #d4a017;
+    }
+    .download-bar__btn--primary {
+      background: #d4a017;
+      border-color: #d4a017;
+      color: #141414;
+    }
+    .download-bar__btn--primary:hover {
+      background: #e6b429;
+    }
+
+    /* Header */
+    .cv-header {
+      border-bottom: 2px solid #141414;
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+    .cv-header__name {
+      font-family: var(--font-display);
+      font-size: 28pt;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: #141414;
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+    .cv-header__role {
+      font-family: var(--font-display);
+      font-size: 13pt;
+      font-weight: 500;
+      color: #444;
+      margin-bottom: 12px;
+    }
+    .cv-header__contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 20px;
+      font-size: 9pt;
+      color: #666;
+    }
+    .cv-header__contact span {
+      white-space: nowrap;
+    }
+
+    /* Section */
+    .cv-section {
+      margin-bottom: 20px;
+    }
+    .cv-section__title {
+      font-family: var(--font-mono);
+      font-size: 9pt;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #141414;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 4px;
+      margin-bottom: 12px;
+    }
+
+    /* Experience */
+    .cv-exp {
+      margin-bottom: 16px;
+    }
+    .cv-exp:last-child { margin-bottom: 0; }
+    .cv-exp__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+    .cv-exp__role {
+      font-weight: 600;
+      font-size: 10.5pt;
+      color: #141414;
+    }
+    .cv-exp__period {
+      font-family: var(--font-mono);
+      font-size: 8.5pt;
+      color: #888;
+      white-space: nowrap;
+    }
+    .cv-exp__company {
+      font-size: 10pt;
+      color: #444;
+      margin-bottom: 4px;
+    }
+    .cv-exp__location {
+      font-size: 9pt;
+      color: #888;
+      margin-bottom: 6px;
+    }
+    .cv-exp__list {
+      padding-left: 16px;
+      list-style: none;
+    }
+    .cv-exp__list li {
+      position: relative;
+      font-size: 9.5pt;
+      color: #333;
+      line-height: 1.5;
+      margin-bottom: 3px;
+    }
+    .cv-exp__list li::before {
+      content: '—';
+      position: absolute;
+      left: -16px;
+      color: #aaa;
+    }
+
+    /* Skills */
+    .cv-skills {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 6px 16px;
+      font-size: 9.5pt;
+    }
+    .cv-skills__cat {
+      font-weight: 600;
+      color: #141414;
+    }
+    .cv-skills__list {
+      color: #444;
+    }
+
+    /* Education */
+    .cv-edu {
+      margin-bottom: 12px;
+    }
+    .cv-edu:last-child { margin-bottom: 0; }
+    .cv-edu__degree {
+      font-weight: 600;
+      font-size: 10.5pt;
+      color: #141414;
+    }
+    .cv-edu__school {
+      font-size: 10pt;
+      color: #444;
+    }
+    .cv-edu__year {
+      font-family: var(--font-mono);
+      font-size: 8.5pt;
+      color: #888;
+    }
+
+    /* Projects */
+    .cv-proj {
+      margin-bottom: 10px;
+    }
+    .cv-proj:last-child { margin-bottom: 0; }
+    .cv-proj__title {
+      font-weight: 600;
+      font-size: 10pt;
+      color: #141414;
+    }
+    .cv-proj__desc {
+      font-size: 9.5pt;
+      color: #444;
+    }
+    .cv-proj__tech {
+      font-family: var(--font-mono);
+      font-size: 8pt;
+      color: #888;
+      margin-top: 2px;
+    }
+
+    /* Certifications */
+    .cv-cert {
+      margin-bottom: 8px;
+    }
+    .cv-cert:last-child { margin-bottom: 0; }
+    .cv-cert__title {
+      font-weight: 600;
+      font-size: 10pt;
+      color: #141414;
+    }
+    .cv-cert__issuer {
+      font-size: 9pt;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Download bar (hidden on print) -->
+  <div class="download-bar no-print">
+    <div class="download-bar__left">CV Preview</div>
+    <div class="download-bar__actions">
+      <a href="/" class="download-bar__btn">Back to Site</a>
+      <button onclick="window.print()" class="download-bar__btn download-bar__btn--primary">Save as PDF</button>
+    </div>
+  </div>
+
+  <div class="cv">
+    <!-- Header -->
+    <header class="cv-header">
+      <h1 class="cv-header__name">Ahmad Fiqi Efendi</h1>
+      <div class="cv-header__role">IT Database Administrator · Android Developer · IT Project Lead</div>
+      <div class="cv-header__contact">
+        <span>fiqiefendi13@gmail.com</span>
+        <span>+62 851 5646 2398</span>
+        <span>linkedin.com/in/fiqi-efendi</span>
+        <span>github.com/Fiqiefendiahmad</span>
+        <span>Jakarta, Indonesia</span>
+      </div>
+    </header>
+
+    <!-- Summary -->
+    <section class="cv-section">
+      <h2 class="cv-section__title">Professional Summary</h2>
+      <p style="font-size:9.5pt; color:#333; line-height:1.6;">
+        IT professional with hands-on experience in Oracle/MySQL database administration, Android application development, and technical project leadership. Skilled in backend development, cloud infrastructure, AI integration, and automation. Proven ability to lead cross-functional teams and deliver scalable solutions from concept to production.
+      </p>
+    </section>
+
+    <!-- Experience -->
+    <section class="cv-section">
+      <h2 class="cv-section__title">Experience</h2>
+
+      <div class="cv-exp">
+        <div class="cv-exp__header">
+          <span class="cv-exp__role">IT Database Administrator</span>
+          <span class="cv-exp__period">Jun 2023 — Present</span>
+        </div>
+        <div class="cv-exp__company">PT. INFOMEDIA NUSANTARA</div>
+        <div class="cv-exp__location">Jakarta, Indonesia · Client: Maybank</div>
+        <ul class="cv-exp__list">
+          <li>24/7 performance monitoring and database availability management for Oracle databases</li>
+          <li>Slow query analysis, blocking query analysis, and AWR report generation</li>
+          <li>Backup monitoring, job scheduling oversight, and incident troubleshooting</li>
+          <li>Performance reporting and capacity planning for production systems</li>
+        </ul>
+      </div>
+
+      <div class="cv-exp">
+        <div class="cv-exp__header">
+          <span class="cv-exp__role">IT Project Lead &amp; Mobile Application Developer</span>
+          <span class="cv-exp__period">2025 — 2026</span>
+        </div>
+        <div class="cv-exp__company">PT. TURGA BERKAH KUBRA</div>
+        <ul class="cv-exp__list">
+          <li>Led full lifecycle of Android application from planning through production deployment</li>
+          <li>Coordinated cross-functional teams and delivered scalable mobile solution</li>
+          <li>Managed project architecture, development, testing, and production support</li>
+        </ul>
+      </div>
+
+      <div class="cv-exp">
+        <div class="cv-exp__header">
+          <span class="cv-exp__role">Android Developer (Freelance)</span>
+          <span class="cv-exp__period">2023 — 2024</span>
+        </div>
+        <div class="cv-exp__company">Various Clients</div>
+        <ul class="cv-exp__list">
+          <li>Developed Android applications for election result tracking, laundry services, and educational platforms</li>
+          <li>Built REST API backends and integrated Firebase services</li>
+          <li>Implemented real-time data synchronization and offline-first architectures</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="cv-section">
+      <h2 class="cv-section__title">Technical Skills</h2>
+      <div class="cv-skills">
+        <span class="cv-skills__cat">Databases</span>
+        <span class="cv-skills__list">Oracle, MySQL, SQL, AWR, Performance Tuning</span>
+
+        <span class="cv-skills__cat">Mobile</span>
+        <span class="cv-skills__list">Android, Java, Kotlin, Flutter, Firebase</span>
+
+        <span class="cv-skills__cat">Backend</span>
+        <span class="cv-skills__list">Spring Boot, Python/Flask, Go, REST APIs</span>
+
+        <span class="cv-skills__cat">Infrastructure</span>
+        <span class="cv-skills__list">Linux, Ubuntu, Docker, GCP, Git, Nginx</span>
+
+        <span class="cv-skills__cat">AI / Automation</span>
+        <span class="cv-skills__list">Gemini, RAG, Langflow, Chroma, Telegram Bots</span>
+
+        <span class="cv-skills__cat">Languages</span>
+        <span class="cv-skills__list">Kotlin, Java, Python, Go, JavaScript, SQL</span>
+      </div>
+    </section>
+
+    <!-- Key Projects -->
+    <section class="cv-section">
+      <h2 class="cv-section__title">Key Projects</h2>
+
+      <div class="cv-proj">
+        <div class="cv-proj__title">Hystory — Android Application</div>
+        <div class="cv-proj__desc">Led development of a mobile application for PT. Turga Berkah Kubra, managing full lifecycle from architecture to production deployment.</div>
+        <div class="cv-proj__tech">Kotlin · Android · REST API · Firebase · GCP · Docker</div>
+      </div>
+
+      <div class="cv-proj">
+        <div class="cv-proj__title">Tan Malaka AI — RAG Research Assistant</div>
+        <div class="cv-proj__desc">Built a historical research assistant using RAG architecture with vector embeddings and Gemini for grounded, source-backed answers.</div>
+        <div class="cv-proj__tech">Langflow · Gemini · RAG · Chroma · Embeddings</div>
+      </div>
+
+      <div class="cv-proj">
+        <div class="cv-proj__title">Election Result Tracking — Android App</div>
+        <div class="cv-proj__desc">Real-time election result tracking application with live data feeds and interactive dashboards.</div>
+        <div class="cv-proj__tech">Android · Java · REST API</div>
+      </div>
+
+      <div class="cv-proj">
+        <div class="cv-proj__title">iWash Laundry Services — Mobile App</div>
+        <div class="cv-proj__desc">On-demand laundry service platform with order tracking, payment integration, and real-time notifications.</div>
+        <div class="cv-proj__tech">Android · Backend API · Firebase</div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="cv-section">
+      <h2 class="cv-section__title">Education</h2>
+      <div class="cv-edu">
+        <div class="cv-edu__degree">Bachelor's Degree in Information Technology</div>
+        <div class="cv-edu__school">Universitas Amir Hamzah (UNESA)</div>
+        <div class="cv-edu__year">Graduated 2024</div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="cv-section">
+      <h2 class="cv-section__title">Certifications</h2>
+      <div class="cv-cert">
+        <div class="cv-cert__title">Introduction to Cybersecurity</div>
+        <div class="cv-cert__issuer">IBM SkillsBuild · 2025</div>
+      </div>
+      <div class="cv-cert">
+        <div class="cv-cert__title">AI Fundamentals</div>
+        <div class="cv-cert__issuer">IBM SkillsBuild · 2025</div>
+      </div>
+      <div class="cv-cert">
+        <div class="cv-cert__title">Introduction to Data Science</div>
+        <div class="cv-cert__issuer">IBM SkillsBuild · 2025</div>
+      </div>
+      <div class="cv-cert">
+        <div class="cv-cert__title">Cloud Computing Fundamentals</div>
+        <div class="cv-cert__issuer">IBM SkillsBuild · 2025</div>
+      </div>
+      <div class="cv-cert">
+        <div class="cv-cert__title">IoT Essentials</div>
+        <div class="cv-cert__issuer">IBM SkillsBuild · 2025</div>
+      </div>
+      <div class="cv-cert">
+        <div class="cv-cert__title">Blockchain Essentials</div>
+        <div class="cv-cert__issuer">IBM SkillsBuild · 2025</div>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
