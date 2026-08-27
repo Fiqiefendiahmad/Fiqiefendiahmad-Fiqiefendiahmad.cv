@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmad Fiqi Efendi — Technical Skills</title>
+  <meta name="description" content="Technical skills spanning database administration, Android development, software engineering, AI, and automation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--gutter);
+    }
+    .ai-eng {
+      margin-top: var(--space-8xl);
+      border-top: 1px solid var(--color-border);
+      padding-top: var(--space-8xl);
+    }
+    .ai-eng__grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+      margin-top: var(--space-3xl);
+    }
+    .ai-eng__item {
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      padding: var(--space-sm) var(--space-lg);
+      border: 1px solid var(--color-border);
+      color: var(--color-text-secondary);
+      transition: border-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+    }
+    .ai-eng__item:hover {
+      border-color: var(--color-accent-border);
+      color: var(--color-text-primary);
+    }
+    .ai-eng__workflow {
+      margin-top: var(--space-3xl);
+      font-family: var(--font-mono);
+      font-size: var(--text-sm);
+      color: var(--color-accent);
+      letter-spacing: var(--tracking-wide);
+    }
+    @media (max-width: 900px) {
+      .skills-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 500px) {
+      .skills-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">Ahmad Fiqi Efendi</a>
+      <div class="nav__links">
+        <a href="/" class="nav__link">Home</a>
+        <a href="/about.html" class="nav__link">About</a>
+        <a href="/experience.html" class="nav__link">Experience</a>
+        <a href="/projects.html" class="nav__link">Projects</a>
+        <a href="/skills.html" class="nav__link is-active">Skills</a>
+        <a href="/education.html" class="nav__link">Education</a>
+      </div>
+      <div class="nav__right">
+        <div class="nav__social">
+          <a href="https://www.linkedin.com/in/fiqi-efendi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+          <a href="https://github.com/Fiqiefendiahmad" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+        </div>
+        <a href="/contact.html" class="nav__cta">Download CV</a>
+      </div>
+      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav__mobile" role="navigation" aria-label="Mobile navigation">
+    <a href="/">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/experience.html">Experience</a>
+    <a href="/projects.html">Projects</a>
+    <a href="/skills.html" class="is-active">Skills</a>
+    <a href="/education.html">Education</a>
+    <div class="nav__mobile-divider"></div>
+    <a href="/contact.html">Contact</a>
+    <div class="nav__mobile-socials">
+      <a href="https://www.linkedin.com/in/fiqi-efendi" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/Fiqiefendiahmad" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://youtube.com/@mrk_studio" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a href="https://x.com/fiqiiiiiiiiiii" target="_blank" rel="noopener noreferrer">X</a>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <section class="page-header">
+      <div class="container">
+        <span class="section-number">05</span>
+        <h1>Technical Skills</h1>
+        <p class="page-header__sub">Tools, languages, and systems used across projects and professional work.</p>
+      </div>
+    </section>
+
+    <section class="section--compact">
+      <div class="container">
+        <div class="skills-grid">
+          <div class="skill-cluster reveal">
+            <h3 class="skill-cluster__title">Database</h3>
+            <div class="skill-cluster__list">
+              <span class="tag">Oracle Database</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">SQL</span>
+              <span class="tag">AWR</span>
+              <span class="tag">Database Monitoring</span>
+              <span class="tag">Performance Analysis</span>
+            </div>
+          </div>
+          <div class="skill-cluster reveal">
+            <h3 class="skill-cluster__title">Android</h3>
+            <div class="skill-cluster__list">
+              <span class="tag">Android</span>
+              <span class="tag">Java</span>
+              <span class="tag">Kotlin</span>
+              <span class="tag">Flutter</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">REST API</span>
+              <span class="tag">MVVM</span>
+              <span class="tag">Clean Architecture</span>
+              <span class="tag">Kotlin Coroutines</span>
+              <span class="tag">SDK Integration</span>
+              <span class="tag">Testing</span>
+              <span class="tag">Debugging</span>
+              <span class="tag">Performance Optimization</span>
+            </div>
+          </div>
+          <div class="skill-cluster reveal">
+            <h3 class="skill-cluster__title">Backend</h3>
+            <div class="skill-cluster__list">
+              <span class="tag">Spring Boot</span>
+              <span class="tag">Python/Flask</span>
+              <span class="tag">Go</span>
+              <span class="tag">REST APIs</span>
+            </div>
+          </div>
+          <div class="skill-cluster reveal">
+            <h3 class="skill-cluster__title">Web</h3>
+            <div class="skill-cluster__list">
+              <span class="tag">JavaScript</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">React.js</span>
+              <span class="tag">Next.js</span>
+            </div>
+          </div>
+          <div class="skill-cluster reveal">
+            <h3 class="skill-cluster__title">Database Systems</h3>
+            <div class="skill-cluster__list">
+              <span class="tag">Oracle</span>
+              <span class="tag">SQL Server</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">SQLite</span>
+            </div>
+          </div>
+          <div class="skill-cluster reveal">
+            <h3 class="skill-cluster__title">Cloud &amp; Infrastructure</h3>
+            <div class="skill-cluster__list">
+              <span class="tag">Google Cloud Platform</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Linux</span>
+              <span class="tag">Ubuntu</span>
+              <span class="tag">Git</span>
+              <span class="tag">GitHub</span>
+            </div>
+          </div>
+          <div class="skill-cluster reveal">
+            <h3 class="skill-cluster__title">AI &amp; Automation</h3>
+            <div class="skill-cluster__list">
+              <span class="tag">Artificial Intelligence</span>
+              <span class="tag">Generative AI</span>
+              <span class="tag">LLM</span>
+              <span class="tag">Gemini</span>
+              <span class="tag">RAG</span>
+              <span class="tag">Langflow</span>
+              <span class="tag">Chroma</span>
+              <span class="tag">Prompt Engineering</span>
+              <span class="tag">Automation</span>
+            </div>
+          </div>
+          <div class="skill-cluster reveal">
+            <h3 class="skill-cluster__title">Project Management</h3>
+            <div class="skill-cluster__list">
+              <span class="tag">Jira</span>
+              <span class="tag">Trello</span>
+              <span class="tag">Notion</span>
+              <span class="tag">Asana</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ai-eng">
+      <div class="container">
+        <span class="section-number">06</span>
+        <span class="label label--accent">AI-Assisted Engineering</span>
+        <div class="ai-eng__grid reveal">
+          <span class="ai-eng__item">Android architecture</span>
+          <span class="ai-eng__item">Kotlin / Flutter debugging</span>
+          <span class="ai-eng__item">SQL optimization</span>
+          <span class="ai-eng__item">REST API implementation</span>
+          <span class="ai-eng__item">Google Play policy troubleshooting</span>
+          <span class="ai-eng__item">Oracle Cloud Infrastructure troubleshooting</span>
+          <span class="ai-eng__item">Linux troubleshooting</span>
+          <span class="ai-eng__item">Nginx</span>
+          <span class="ai-eng__item">Docker</span>
+          <span class="ai-eng__item">Cloudflare</span>
+          <span class="ai-eng__item">SSH</span>
+          <span class="ai-eng__item">Deployment workflows</span>
+          <span class="ai-eng__item">Technical documentation</span>
+          <span class="ai-eng__item">API documentation</span>
+          <span class="ai-eng__item">System design</span>
+          <span class="ai-eng__item">Project briefs</span>
+          <span class="ai-eng__item">CV / professional communication</span>
+        </div>
+        <div class="ai-eng__workflow reveal">AI-assisted &rarr; Human validation &rarr; Adaptation &rarr; Implementation</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__left">
+          <div class="footer__name">Ahmad Fiqi Efendi</div>
+          <div class="footer__identity">
+            IT Database Administrator<br>Android Developer<br>IT Project Lead
+          </div>
+        </div>
+        <div class="footer__links">
+          <div class="footer__col">
+            <div class="footer__col-title">Navigation</div>
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/experience.html">Experience</a>
+            <a href="/projects.html">Projects</a>
+            <a href="/skills.html" class="is-active">Skills</a>
+            <a href="/education.html">Education</a>
+            <a href="/contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">&copy; 2026 Ahmad Fiqi Efendi. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

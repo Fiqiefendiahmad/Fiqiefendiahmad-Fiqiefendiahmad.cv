@@ -1,0 +1,111 @@
+/* tokens.css — Design tokens for Ahmad Fiqi Efendi Portfolio
+ * Swiss Design · Dark palette · Warm amber accent
+ */
+
+:root {
+  /* Colors — Surface */
+  --color-surface: #141414;
+  --color-surface-2: #1c1c1c;
+  --color-surface-3: #242424;
+  --color-surface-hover: #2a2a2a;
+
+  /* Colors — Accent */
+  --color-accent: #d4a017;
+  --color-accent-hover: #e6b429;
+  --color-accent-muted: rgba(212, 160, 23, 0.12);
+  --color-accent-border: rgba(212, 160, 23, 0.25);
+
+  /* Colors — Text */
+  --color-text-primary: #f0ede8;
+  --color-text-secondary: #9a9a9a;
+  --color-text-tertiary: #666666;
+  --color-text-inverse: #141414;
+
+  /* Colors — Border */
+  --color-border: #2a2a2a;
+  --color-border-strong: #3a3a3a;
+
+  /* Colors — Status */
+  --color-status-completed: #4a7c59;
+  --color-status-active: #d4a017;
+  --color-status-development: #d4a017;
+  --color-status-exploration: #666666;
+
+  /* Typography */
+  --font-display: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Font Sizes */
+  --text-display: clamp(2.75rem, 6vw, 5rem);
+  --text-display-s: clamp(2rem, 4vw, 3.25rem);
+  --text-2xl: clamp(1.5rem, 2.5vw, 1.75rem);
+  --text-xl: 1.25rem;
+  --text-lg: 1.125rem;
+  --text-base: 1rem;
+  --text-sm: 0.875rem;
+  --text-xs: 0.75rem;
+  --text-2xs: 0.6875rem;
+
+  /* Font Weights */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* Line Heights */
+  --leading-tight: 1.1;
+  --leading-snug: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.65;
+
+  /* Letter Spacing */
+  --tracking-tight: -0.03em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.05em;
+  --tracking-wider: 0.1em;
+  --tracking-widest: 0.15em;
+
+  /* Spacing — 4px base */
+  --space-2xs: 2px;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 20px;
+  --space-2xl: 24px;
+  --space-3xl: 32px;
+  --space-4xl: 40px;
+  --space-5xl: 48px;
+  --space-6xl: 64px;
+  --space-7xl: 80px;
+  --space-8xl: 96px;
+  --space-9xl: 128px;
+
+  /* Layout */
+  --max-width: 1200px;
+  --max-width-narrow: 800px;
+  --max-width-wide: 1400px;
+  --gutter: clamp(16px, 4vw, 32px);
+  --nav-height: 64px;
+
+  /* Border Radius */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.4, 0, 0.68, 0.06);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 120ms;
+  --dur-base: 200ms;
+  --dur-slow: 350ms;
+
+  /* Z-Index */
+  --z-base: 1;
+  --z-sticky: 100;
+  --z-overlay: 200;
+  --z-modal: 300;
+}

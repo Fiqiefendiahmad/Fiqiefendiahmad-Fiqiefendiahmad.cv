@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Experience — Ahmad Fiqi Efendi</title>
+  <meta name="description" content="Professional experience of Ahmad Fiqi Efendi spanning database administration, Android development, IT project leadership, and creative work.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    .experience-section {
+      padding: var(--space-8xl) 0;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .timeline--career {
+      padding-top: var(--space-xl);
+    }
+
+    .timeline__item--muted {
+      opacity: 0.55;
+    }
+
+    .timeline__item--muted:hover {
+      opacity: 0.8;
+    }
+
+    .timeline__meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-lg);
+      margin-bottom: var(--space-md);
+    }
+
+    .timeline__client {
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      letter-spacing: var(--tracking-wide);
+      color: var(--color-accent);
+      padding: var(--space-2xs) var(--space-sm);
+      border: 1px solid var(--color-accent-border);
+    }
+
+    .timeline__project {
+      font-family: var(--font-mono);
+      font-size: var(--text-xs);
+      letter-spacing: var(--tracking-wide);
+      color: var(--color-text-tertiary);
+      padding: var(--space-2xs) var(--space-sm);
+      border: 1px solid var(--color-border);
+    }
+
+    @media (max-width: 768px) {
+      .timeline {
+        padding-left: var(--space-3xl);
+      }
+      .timeline__dot {
+        left: calc(-1 * var(--space-3xl) + 3px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">Ahmad Fiqi Efendi</a>
+
+      <div class="nav__links">
+        <a href="/" class="nav__link">Home</a>
+        <a href="/about.html" class="nav__link">About</a>
+        <a href="/experience.html" class="nav__link is-active">Experience</a>
+        <a href="/projects.html" class="nav__link">Projects</a>
+        <a href="/skills.html" class="nav__link">Skills</a>
+        <a href="/education.html" class="nav__link">Education</a>
+      </div>
+
+      <div class="nav__right">
+        <div class="nav__social">
+          <a href="https://www.linkedin.com/in/fiqi-efendi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+          <a href="https://github.com/Fiqiefendiahmad" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+        </div>
+        <a href="/contact.html" class="nav__cta">Download CV</a>
+      </div>
+
+      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile nav -->
+  <div class="nav__mobile" role="navigation" aria-label="Mobile navigation">
+    <a href="/">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/experience.html" class="is-active">Experience</a>
+    <a href="/projects.html">Projects</a>
+    <a href="/skills.html">Skills</a>
+    <a href="/education.html">Education</a>
+    <div class="nav__mobile-divider"></div>
+    <a href="/contact.html">Contact</a>
+    <div class="nav__mobile-socials">
+      <a href="https://www.linkedin.com/in/fiqi-efendi" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/Fiqiefendiahmad" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://youtube.com/@mrk_studio" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a href="https://x.com/fiqiiiiiiiiiii" target="_blank" rel="noopener noreferrer">X</a>
+    </div>
+  </div>
+
+  <main id="main-content" id="main-content">
+
+    <!-- ===== PAGE HEADER ===== -->
+    <section class="page-header">
+      <div class="container">
+        <div class="page-header__label">
+          <span class="section-number">03</span>
+          <span class="label">Experience</span>
+        </div>
+        <h1>PROFESSIONAL<br>EXPERIENCE</h1>
+        <p class="page-header__sub">A career spanning database administration, Android development, IT project leadership, and creative production — delivering systems and solutions across enterprise and startup environments.</p>
+      </div>
+    </section>
+
+    <!-- ===== CAREER TIMELINE ===== -->
+    <section class="experience-section">
+      <div class="container container--narrow">
+        <div class="timeline timeline--career">
+
+          <!-- 1. PT. Infomedia Nusantara (Current) -->
+          <div class="timeline__item is-current reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__period">June 2023 &ndash; Present</div>
+            <h3 class="timeline__company">PT. INFOMEDIA NUSANTARA</h3>
+            <div class="timeline__role">IT Database Administrator</div>
+            <div class="timeline__location">Jakarta, Indonesia</div>
+            <div class="timeline__meta">
+              <span class="timeline__client">Client: Maybank</span>
+            </div>
+            <div class="timeline__responsibilities">
+              <span class="tag">24/7 Performance Monitoring</span>
+              <span class="tag">Database Availability</span>
+              <span class="tag">First-level Database Support</span>
+              <span class="tag">Performance Reporting</span>
+              <span class="tag">Slow Query Identification</span>
+              <span class="tag">Resource-intensive Query Analysis</span>
+              <span class="tag">Blocking Query Analysis</span>
+              <span class="tag">Missing-index Analysis</span>
+              <span class="tag">Job Monitoring</span>
+              <span class="tag">Backup Monitoring</span>
+              <span class="tag">AWR Analysis</span>
+              <span class="tag">ManageEngine Alerts</span>
+              <span class="tag">Initial Troubleshooting</span>
+              <span class="tag">SME DBA Collaboration</span>
+              <span class="tag">Database Integrity</span>
+              <span class="tag">Database Performance</span>
+            </div>
+          </div>
+
+          <!-- 2. PT Turga Berkah Kubra -->
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__period">September 2024 &ndash; May 2026</div>
+            <h3 class="timeline__company">PT TURGA BERKAH KUBRA</h3>
+            <div class="timeline__role">Lead Information Technology Specialist</div>
+            <div class="timeline__location">Jakarta, Indonesia</div>
+            <div class="timeline__meta">
+              <span class="timeline__project">Project: Hystory (2025&ndash;2026)</span>
+              <span class="timeline__project">Role: IT Project Lead &amp; Mobile Application Developer</span>
+            </div>
+            <div class="timeline__responsibilities">
+              <span class="tag">Project Planning</span>
+              <span class="tag">Project Scope</span>
+              <span class="tag">Product Roadmap</span>
+              <span class="tag">Technical Requirements</span>
+              <span class="tag">Development Milestones</span>
+              <span class="tag">Developer Coordination</span>
+              <span class="tag">Designer Coordination</span>
+              <span class="tag">QA Coordination</span>
+              <span class="tag">Business Stakeholder Coordination</span>
+              <span class="tag">Android Development</span>
+              <span class="tag">Kotlin</span>
+              <span class="tag">Scalable Architecture</span>
+              <span class="tag">RESTful APIs</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Backend Systems</span>
+              <span class="tag">Database Design</span>
+              <span class="tag">Deployment</span>
+              <span class="tag">Release Management</span>
+              <span class="tag">GCP</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Code Reviews</span>
+              <span class="tag">Developer Mentoring</span>
+              <span class="tag">Development Best Practices</span>
+              <span class="tag">Project Progress Monitoring</span>
+              <span class="tag">Technical Problem Solving</span>
+              <span class="tag">Performance Optimization</span>
+              <span class="tag">Production Releases</span>
+            </div>
+          </div>
+
+          <!-- 3. Android Developer — Self Employed -->
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__period">April 2020 &ndash; Present</div>
+            <h3 class="timeline__company">ANDROID DEVELOPER</h3>
+            <div class="timeline__role">Self Employed</div>
+            <div class="timeline__location">Lamongan, East Java, Indonesia</div>
+            <div class="timeline__desc">Developed Android applications for commercial and educational clients using Java and Kotlin with Firebase and REST API integration.</div>
+            <div class="timeline__responsibilities">
+              <span class="tag">Code Review</span>
+              <span class="tag">Quality Assurance</span>
+              <span class="tag">Mobile Application Architecture</span>
+              <span class="tag">Performance Optimization</span>
+              <span class="tag">SDK Integration</span>
+              <span class="tag">Third-party Library Integration</span>
+              <span class="tag">API Integration</span>
+              <span class="tag">Testing</span>
+              <span class="tag">Debugging</span>
+              <span class="tag">Continuous Learning</span>
+            </div>
+          </div>
+
+          <!-- 4. Video Editor — Self Employed -->
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__period">January 2019 &ndash; Present</div>
+            <h3 class="timeline__company">VIDEO EDITOR</h3>
+            <div class="timeline__role">Self Employed</div>
+            <div class="timeline__location">Lamongan, East Java, Indonesia</div>
+            <div class="timeline__responsibilities">
+              <span class="tag">Video Editing</span>
+              <span class="tag">Content Creation</span>
+              <span class="tag">Post-production</span>
+              <span class="tag">Motion Graphics</span>
+              <span class="tag">Visual Effects</span>
+              <span class="tag">Audio Editing</span>
+              <span class="tag">Color Correction</span>
+              <span class="tag">Color Grading</span>
+              <span class="tag">Project Management</span>
+              <span class="tag">Project File Organization</span>
+              <span class="tag">Version Control</span>
+              <span class="tag">Feedback and Revisions</span>
+              <span class="tag">Industry Trends</span>
+            </div>
+          </div>
+
+          <!-- 5. Freelance Graphic Designer -->
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__period">November 2013 &ndash; June 2023</div>
+            <h3 class="timeline__company">FREELANCE GRAPHIC DESIGNER</h3>
+            <div class="timeline__role">Self Employed</div>
+            <div class="timeline__responsibilities">
+              <span class="tag">Graphic Design</span>
+              <span class="tag">Logo Design</span>
+              <span class="tag">Brochures</span>
+              <span class="tag">Posters</span>
+              <span class="tag">Social Media Graphics</span>
+              <span class="tag">Website Graphics</span>
+              <span class="tag">Conceptualization</span>
+              <span class="tag">Client Collaboration</span>
+              <span class="tag">Project Management</span>
+              <span class="tag">Design Research</span>
+              <span class="tag">Design Trends</span>
+            </div>
+          </div>
+
+          <!-- 6. Potret Pantura -->
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__period">January 2020 &ndash; October 2021</div>
+            <h3 class="timeline__company">POTRET PANTURA</h3>
+            <div class="timeline__role">Video Editor</div>
+            <div class="timeline__location">Lamongan, East Java, Indonesia</div>
+            <div class="timeline__responsibilities">
+              <span class="tag">Multimedia Content Creation</span>
+              <span class="tag">Conceptualization</span>
+              <span class="tag">Shooting</span>
+              <span class="tag">Editing</span>
+              <span class="tag">Post-production</span>
+              <span class="tag">Web Management</span>
+              <span class="tag">Content Curation</span>
+              <span class="tag">Project Leadership</span>
+              <span class="tag">Visual Enhancements</span>
+              <span class="tag">Motion Graphics</span>
+              <span class="tag">Animations</span>
+              <span class="tag">Special Effects</span>
+              <span class="tag">Audio Enhancement</span>
+              <span class="tag">Content Strategy</span>
+              <span class="tag">Quality Assurance</span>
+              <span class="tag">Client Collaboration</span>
+              <span class="tag">Continuous Learning</span>
+            </div>
+          </div>
+
+          <!-- 7. ReCharge Indonesia (muted) -->
+          <div class="timeline__item timeline__item--muted reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__period">July 2019 &ndash; April 2020</div>
+            <h3 class="timeline__company">RECHARGE INDONESIA</h3>
+            <div class="timeline__role">Warehouse Operative</div>
+            <div class="timeline__location">Yogyakarta</div>
+            <div class="timeline__responsibilities">
+              <span class="tag">Warehouse Operations</span>
+              <span class="tag">Inventory Management</span>
+              <span class="tag">Order Fulfillment</span>
+              <span class="tag">Quality Control</span>
+              <span class="tag">Vending Machine Maintenance</span>
+              <span class="tag">Power Bank Vending Machine Maintenance</span>
+              <span class="tag">Daily Reporting</span>
+              <span class="tag">CRM Management</span>
+              <span class="tag">Server-side Android App Maintenance</span>
+              <span class="tag">Logistic Distribution</span>
+              <span class="tag">Quality Assurance</span>
+              <span class="tag">Inventory Auditing</span>
+              <span class="tag">Safety and Compliance</span>
+              <span class="tag">Cross-functional Collaboration</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__left">
+          <div class="footer__name">Ahmad Fiqi Efendi</div>
+          <div class="footer__identity">
+            IT Database Administrator<br>
+            Android Developer<br>
+            IT Project Lead
+          </div>
+        </div>
+        <div class="footer__links">
+          <div class="footer__col">
+            <div class="footer__col-title">Navigation</div>
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/experience.html" class="is-active">Experience</a>
+            <a href="/projects.html">Projects</a>
+            <a href="/skills.html">Skills</a>
+            <a href="/education.html">Education</a>
+            <a href="/contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">&copy; 2026 Ahmad Fiqi Efendi. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

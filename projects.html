@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahmad Fiqi Efendi — Selected Work</title>
+  <meta name="description" content="Applications, AI systems, automation projects, and infrastructure by Ahmad Fiqi Efendi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--gutter);
+    }
+    @media (max-width: 768px) {
+      .projects-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">Ahmad Fiqi Efendi</a>
+      <div class="nav__links">
+        <a href="/" class="nav__link">Home</a>
+        <a href="/about.html" class="nav__link">About</a>
+        <a href="/experience.html" class="nav__link">Experience</a>
+        <a href="/projects.html" class="nav__link is-active">Projects</a>
+        <a href="/skills.html" class="nav__link">Skills</a>
+        <a href="/education.html" class="nav__link">Education</a>
+      </div>
+      <div class="nav__right">
+        <div class="nav__social">
+          <a href="https://www.linkedin.com/in/fiqi-efendi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+          <a href="https://github.com/Fiqiefendiahmad" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+        </div>
+        <a href="/contact.html" class="nav__cta">Download CV</a>
+      </div>
+      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav__mobile" role="navigation" aria-label="Mobile navigation">
+    <a href="/">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/experience.html">Experience</a>
+    <a href="/projects.html" class="is-active">Projects</a>
+    <a href="/skills.html">Skills</a>
+    <a href="/education.html">Education</a>
+    <div class="nav__mobile-divider"></div>
+    <a href="/contact.html">Contact</a>
+    <div class="nav__mobile-socials">
+      <a href="https://www.linkedin.com/in/fiqi-efendi" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/Fiqiefendiahmad" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://youtube.com/@mrk_studio" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a href="https://x.com/fiqiiiiiiiiiii" target="_blank" rel="noopener noreferrer">X</a>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <section class="page-header">
+      <div class="container">
+        <span class="section-number">03</span>
+        <h1>Selected Work</h1>
+        <p class="page-header__sub">Applications, AI systems, automation projects, and infrastructure.</p>
+      </div>
+    </section>
+
+    <section class="section--compact">
+      <div class="container">
+        <div class="filter-bar">
+          <button class="filter-btn is-active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="android">Android</button>
+          <button class="filter-btn" data-filter="ai">AI</button>
+          <button class="filter-btn" data-filter="automation">Automation</button>
+          <button class="filter-btn" data-filter="education">Education</button>
+          <button class="filter-btn" data-filter="infrastructure">Infrastructure</button>
+          <button class="filter-btn" data-filter="management">Management</button>
+        </div>
+
+        <div class="projects-grid">
+          <a href="/case-study/hystory.html" class="project-card reveal" data-category="android">
+            <div class="project-card__header">
+              <span class="project-card__number">01</span>
+              <span class="status status--completed">Completed</span>
+            </div>
+            <h3 class="project-card__title">Hystory</h3>
+            <div class="project-card__meta">IT Project Lead &amp; Mobile Application Developer &middot; PT Turga Berkah Kubra &middot; 2025–2026</div>
+            <div class="project-card__tags">
+              <span class="tag tag--accent">Kotlin</span>
+              <span class="tag">Android</span>
+              <span class="tag">REST API</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">GCP</span>
+              <span class="tag">Docker</span>
+            </div>
+            <div class="project-card__footer">
+              <span class="tag">Android</span>
+              <span class="card__link">View Case Study</span>
+            </div>
+          </a>
+
+          <a href="/case-study/tan-malaka-ai.html" class="project-card reveal" data-category="ai">
+            <div class="project-card__header">
+              <span class="project-card__number">02</span>
+              <span class="status status--completed">Completed</span>
+            </div>
+            <h3 class="project-card__title">Tan Malaka AI</h3>
+            <div class="project-card__meta">AI / RAG &middot; Capstone Project &middot; 2025</div>
+            <div class="project-card__tags">
+              <span class="tag tag--accent">Langflow</span>
+              <span class="tag tag--accent">Gemini</span>
+              <span class="tag">RAG</span>
+              <span class="tag">Chroma</span>
+              <span class="tag">Embeddings</span>
+            </div>
+            <div class="project-card__footer">
+              <span class="tag">AI</span>
+              <span class="card__link">View Case Study</span>
+            </div>
+          </a>
+
+          <a href="/case-study/election-tracking.html" class="project-card reveal" data-category="android">
+            <div class="project-card__header">
+              <span class="project-card__number">03</span>
+              <span class="status status--completed">Completed</span>
+            </div>
+            <h3 class="project-card__title">Election Result Tracking Application</h3>
+            <div class="project-card__meta">Developer</div>
+            <div class="project-card__tags">
+              <span class="tag">Android</span>
+              <span class="tag">Java</span>
+            </div>
+            <div class="project-card__footer">
+              <span class="tag">Android</span>
+              <span class="card__link">View Case Study</span>
+            </div>
+          </a>
+
+          <a href="/case-study/iwash.html" class="project-card reveal" data-category="android">
+            <div class="project-card__header">
+              <span class="project-card__number">04</span>
+              <span class="status status--completed">Completed</span>
+            </div>
+            <h3 class="project-card__title">iWash Laundry Services</h3>
+            <div class="project-card__meta">Developer</div>
+            <div class="project-card__tags">
+              <span class="tag">Android</span>
+              <span class="tag">Backend</span>
+            </div>
+            <div class="project-card__footer">
+              <span class="tag">Android</span>
+              <span class="card__link">View Case Study</span>
+            </div>
+          </a>
+
+          <a href="/case-study/educational-apps.html" class="project-card reveal" data-category="education">
+            <div class="project-card__header">
+              <span class="project-card__number">05</span>
+              <span class="status status--completed">Completed</span>
+            </div>
+            <h3 class="project-card__title">Educational Mobile Applications for Madrasah / Yayasan</h3>
+            <div class="project-card__meta">Developer</div>
+            <div class="project-card__tags">
+              <span class="tag">Java</span>
+              <span class="tag">Kotlin</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">REST APIs</span>
+            </div>
+            <div class="project-card__footer">
+              <span class="tag">Education</span>
+              <span class="card__link">View Case Study</span>
+            </div>
+          </a>
+
+          <a href="/case-study/room-management.html" class="project-card reveal" data-category="management">
+            <div class="project-card__header">
+              <span class="project-card__number">06</span>
+              <span class="status status--completed">Completed</span>
+            </div>
+            <h3 class="project-card__title">Room Management Application</h3>
+            <div class="project-card__meta">Developer</div>
+            <div class="project-card__tags">
+              <span class="tag">Android</span>
+              <span class="tag">Java</span>
+            </div>
+            <div class="project-card__footer">
+              <span class="tag">Management</span>
+              <span class="card__link">View Case Study</span>
+            </div>
+          </a>
+
+          <a href="/case-study/content-rewards.html" class="project-card reveal" data-category="automation">
+            <div class="project-card__header">
+              <span class="project-card__number">07</span>
+              <span class="status status--development">In Development</span>
+            </div>
+            <h3 class="project-card__title">Content Rewards &rarr; YouTube Automation</h3>
+            <div class="project-card__meta">Personal Project</div>
+            <div class="project-card__tags">
+              <span class="tag">Ubuntu</span>
+              <span class="tag">GitHub</span>
+              <span class="tag">Linux</span>
+              <span class="tag">YouTube</span>
+              <span class="tag">Automation</span>
+            </div>
+            <div class="project-card__footer">
+              <span class="tag">Automation</span>
+              <span class="card__link">View Case Study</span>
+            </div>
+          </a>
+
+          <a href="/case-study/telegram-automation.html" class="project-card reveal" data-category="automation">
+            <div class="project-card__header">
+              <span class="project-card__number">08</span>
+              <span class="status status--development">In Development</span>
+            </div>
+            <h3 class="project-card__title">Telegram &rarr; Website Content Automation</h3>
+            <div class="project-card__meta">Personal Project &middot; Planned</div>
+            <div class="project-card__tags">
+              <span class="tag">Telegram</span>
+              <span class="tag">Bot</span>
+              <span class="tag">AI</span>
+              <span class="tag">Website</span>
+            </div>
+            <div class="project-card__footer">
+              <span class="tag">Automation</span>
+              <span class="card__link">View Case Study</span>
+            </div>
+          </a>
+
+          <a href="/case-study/ai-video.html" class="project-card reveal" data-category="ai">
+            <div class="project-card__header">
+              <span class="project-card__number">09</span>
+              <span class="status status--exploration">Exploration</span>
+            </div>
+            <h3 class="project-card__title">AI Video Editing &amp; Processing</h3>
+            <div class="project-card__meta">Personal Project &middot; Planned</div>
+            <div class="project-card__tags">
+              <span class="tag">AI</span>
+              <span class="tag">Video</span>
+              <span class="tag">Automation</span>
+            </div>
+            <div class="project-card__footer">
+              <span class="tag">AI</span>
+              <span class="card__link">View Case Study</span>
+            </div>
+          </a>
+
+          <a href="/case-study/self-hosted.html" class="project-card reveal" data-category="infrastructure">
+            <div class="project-card__header">
+              <span class="project-card__number">10</span>
+              <span class="status status--active">Active</span>
+            </div>
+            <h3 class="project-card__title">Self-Hosted Ubuntu Infrastructure &amp; Automation</h3>
+            <div class="project-card__meta">Personal Project</div>
+            <div class="project-card__tags">
+              <span class="tag">Ubuntu</span>
+              <span class="tag">Linux</span>
+              <span class="tag">Pi-hole</span>
+              <span class="tag">Docker</span>
+              <span class="tag">GitHub</span>
+            </div>
+            <div class="project-card__footer">
+              <span class="tag">Infrastructure</span>
+              <span class="card__link">View Case Study</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__left">
+          <div class="footer__name">Ahmad Fiqi Efendi</div>
+          <div class="footer__identity">
+            IT Database Administrator<br>Android Developer<br>IT Project Lead
+          </div>
+        </div>
+        <div class="footer__links">
+          <div class="footer__col">
+            <div class="footer__col-title">Navigation</div>
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/experience.html">Experience</a>
+            <a href="/projects.html" class="is-active">Projects</a>
+            <a href="/skills.html">Skills</a>
+            <a href="/education.html">Education</a>
+            <a href="/contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">&copy; 2026 Ahmad Fiqi Efendi. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/projects.js"></script>
+</body>
+</html>

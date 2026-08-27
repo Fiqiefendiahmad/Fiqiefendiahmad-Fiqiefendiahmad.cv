@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leadership &amp; Additional Experience — Ahmad Fiqi Efendi</title>
+  <meta name="description" content="Leadership roles and creative background of Ahmad Fiqi Efendi including community organizations, scouting, and multimedia production.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    .leadership-section {
+      padding: var(--space-8xl) 0;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .timeline--leadership {
+      padding-top: var(--space-xl);
+    }
+
+    .timeline__org {
+      font-size: var(--text-sm);
+      color: var(--color-text-tertiary);
+      margin-bottom: var(--space-xl);
+    }
+
+    /* Creative background cards */
+    .creative-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--gutter);
+    }
+
+    .creative-card {
+      background-color: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      padding: var(--space-3xl);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+      transition: border-color var(--dur-base) var(--ease-out),
+                  background-color var(--dur-base) var(--ease-out);
+    }
+
+    .creative-card:hover {
+      border-color: var(--color-border-strong);
+      background-color: var(--color-surface-3);
+    }
+
+    .creative-card__number {
+      font-family: var(--font-mono);
+      font-size: var(--text-2xs);
+      color: var(--color-text-tertiary);
+      letter-spacing: var(--tracking-widest);
+    }
+
+    .creative-card__title {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      font-weight: var(--weight-bold);
+      color: var(--color-text-primary);
+      line-height: var(--leading-snug);
+    }
+
+    .creative-card__role {
+      font-size: var(--text-sm);
+      color: var(--color-accent);
+      font-weight: var(--weight-medium);
+    }
+
+    .creative-card__meta {
+      font-size: var(--text-sm);
+      color: var(--color-text-tertiary);
+    }
+
+    .creative-card__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+    }
+
+    @media (max-width: 900px) {
+      .creative-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .timeline {
+        padding-left: var(--space-3xl);
+      }
+      .timeline__dot {
+        left: calc(-1 * var(--space-3xl) + 3px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">Ahmad Fiqi Efendi</a>
+
+      <div class="nav__links">
+        <a href="/" class="nav__link">Home</a>
+        <a href="/about.html" class="nav__link">About</a>
+        <a href="/experience.html" class="nav__link">Experience</a>
+        <a href="/projects.html" class="nav__link">Projects</a>
+        <a href="/skills.html" class="nav__link">Skills</a>
+        <a href="/education.html" class="nav__link">Education</a>
+      </div>
+
+      <div class="nav__right">
+        <div class="nav__social">
+          <a href="https://www.linkedin.com/in/fiqi-efendi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+          <a href="https://github.com/Fiqiefendiahmad" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+        </div>
+        <a href="/contact.html" class="nav__cta">Download CV</a>
+      </div>
+
+      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile nav -->
+  <div class="nav__mobile" role="navigation" aria-label="Mobile navigation">
+    <a href="/">Home</a>
+    <a href="/about.html">About</a>
+    <a href="/experience.html">Experience</a>
+    <a href="/projects.html">Projects</a>
+    <a href="/skills.html">Skills</a>
+    <a href="/education.html">Education</a>
+    <div class="nav__mobile-divider"></div>
+    <a href="/contact.html">Contact</a>
+    <div class="nav__mobile-socials">
+      <a href="https://www.linkedin.com/in/fiqi-efendi" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/Fiqiefendiahmad" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://youtube.com/@mrk_studio" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a href="https://x.com/fiqiiiiiiiiiii" target="_blank" rel="noopener noreferrer">X</a>
+    </div>
+  </div>
+
+  <main id="main-content" id="main-content">
+
+    <!-- ===== PAGE HEADER ===== -->
+    <section class="page-header">
+      <div class="container">
+        <div class="page-header__label">
+          <span class="label">Secondary</span>
+        </div>
+        <h1>LEADERSHIP &amp;<br>ADDITIONAL EXPERIENCE</h1>
+        <p class="page-header__sub">Beyond technical work — community leadership, cultural organizations, and a creative production background in video and graphic design.</p>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 1: LEADERSHIP ===== -->
+    <section class="leadership-section">
+      <div class="container container--narrow">
+        <div class="section-number reveal">01</div>
+        <span class="label label--accent reveal">Leadership</span>
+        <hr class="rule rule--accent" style="margin-top:var(--space-2xl); margin-bottom:var(--space-4xl);">
+
+        <div class="timeline timeline--leadership">
+
+          <!-- 1. Pegiat Seni Budaya Pantura -->
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__period">2021 &ndash; 2023</div>
+            <h3 class="timeline__company">DEPUTY CHAIRMAN</h3>
+            <div class="timeline__org">Pegiat Seni Budaya Pantura</div>
+          </div>
+
+          <!-- 2. Karang Taruna Paciran -->
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__period">2019 &ndash; 2022</div>
+            <h3 class="timeline__company">DEPUTY CHAIRMAN</h3>
+            <div class="timeline__org">Karang Taruna Paciran, Lamongan</div>
+          </div>
+
+          <!-- 3. IMM -->
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__period">2014 &ndash; 2017</div>
+            <h3 class="timeline__company">MEMBER</h3>
+            <div class="timeline__org">Ikatan Mahasiswa Muhammadiyah (IMM), Universitas Ahmad Dahlan</div>
+          </div>
+
+          <!-- 4. Scout Advisor -->
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__period">2011 &ndash; 2012</div>
+            <h3 class="timeline__company">SCOUT ADVISOR / SUPERVISOR</h3>
+          </div>
+
+          <!-- 5. Chief of Scout Unit -->
+          <div class="timeline__item reveal">
+            <div class="timeline__dot"></div>
+            <div class="timeline__period">2010 &ndash; 2011</div>
+            <h3 class="timeline__company">CHIEF OF SCOUT UNIT</h3>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 2: CREATIVE BACKGROUND ===== -->
+    <section class="leadership-section">
+      <div class="container">
+        <div class="section-number reveal">02</div>
+        <span class="label label--accent reveal">Creative Background</span>
+        <hr class="rule rule--accent" style="margin-top:var(--space-2xl); margin-bottom:var(--space-4xl);">
+
+        <div class="creative-grid">
+
+          <!-- Video Editor -->
+          <div class="creative-card reveal">
+            <span class="creative-card__number">01</span>
+            <h3 class="creative-card__title">Video Editor</h3>
+            <div class="creative-card__role">Self Employed</div>
+            <div class="creative-card__meta">January 2019 &ndash; Present</div>
+            <div class="creative-card__tags">
+              <span class="tag">Video Editing</span>
+              <span class="tag">Post-production</span>
+              <span class="tag">Motion Graphics</span>
+              <span class="tag">Visual Effects</span>
+              <span class="tag">Audio Editing</span>
+              <span class="tag">Color Grading</span>
+            </div>
+          </div>
+
+          <!-- Freelance Graphic Designer -->
+          <div class="creative-card reveal">
+            <span class="creative-card__number">02</span>
+            <h3 class="creative-card__title">Freelance Graphic Designer</h3>
+            <div class="creative-card__role">Self Employed</div>
+            <div class="creative-card__meta">November 2013 &ndash; June 2023</div>
+            <div class="creative-card__tags">
+              <span class="tag">Graphic Design</span>
+              <span class="tag">Logo Design</span>
+              <span class="tag">Brochures</span>
+              <span class="tag">Social Media</span>
+              <span class="tag">Web Graphics</span>
+            </div>
+          </div>
+
+          <!-- Potret Pantura -->
+          <div class="creative-card reveal">
+            <span class="creative-card__number">03</span>
+            <h3 class="creative-card__title">Potret Pantura</h3>
+            <div class="creative-card__role">Video Editor</div>
+            <div class="creative-card__meta">January 2020 &ndash; October 2021 &middot; Lamongan</div>
+            <div class="creative-card__tags">
+              <span class="tag">Content Creation</span>
+              <span class="tag">Shooting</span>
+              <span class="tag">Post-production</span>
+              <span class="tag">Web Management</span>
+              <span class="tag">Content Strategy</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__left">
+          <div class="footer__name">Ahmad Fiqi Efendi</div>
+          <div class="footer__identity">
+            IT Database Administrator<br>
+            Android Developer<br>
+            IT Project Lead
+          </div>
+        </div>
+        <div class="footer__links">
+          <div class="footer__col">
+            <div class="footer__col-title">Navigation</div>
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/experience.html">Experience</a>
+            <a href="/projects.html">Projects</a>
+            <a href="/skills.html">Skills</a>
+            <a href="/education.html">Education</a>
+            <a href="/contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">&copy; 2026 Ahmad Fiqi Efendi. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/nav.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

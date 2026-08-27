@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Room Management Application — Case Study — Ahmad Fiqi Efendi</title>
+  <meta name="description" content="Case study for Room Management Application — room management for extracurricular activities.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/tokens.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <style>
+    .breadcrumb { display:flex; align-items:center; gap:var(--space-sm); font-family:var(--font-mono); font-size:var(--text-xs); letter-spacing:var(--tracking-wider); text-transform:uppercase; color:var(--color-text-tertiary); margin-bottom:var(--space-3xl); }
+    .breadcrumb a { color:var(--color-text-tertiary); transition:color var(--dur-fast) var(--ease-out); }
+    .breadcrumb a:hover { color:var(--color-text-primary); }
+    .breadcrumb__sep { color:var(--color-border-strong); }
+    .cs-hero { padding-top:calc(var(--nav-height) + var(--space-8xl)); padding-bottom:var(--space-6xl); border-bottom:1px solid var(--color-border); }
+    .cs-hero__label { font-family:var(--font-mono); font-size:var(--text-2xs); letter-spacing:var(--tracking-widest); text-transform:uppercase; color:var(--color-accent); margin-bottom:var(--space-xl); display:block; }
+    .cs-hero__title { font-family:var(--font-display); font-size:var(--text-display); font-weight:var(--weight-bold); line-height:var(--leading-tight); letter-spacing:var(--tracking-tight); color:var(--color-text-primary); margin-bottom:var(--space-xl); }
+    .cs-hero__meta { display:flex; flex-wrap:wrap; align-items:center; gap:var(--space-xl); margin-top:var(--space-2xl); }
+    .cs-hero__meta-item { display:flex; flex-direction:column; gap:var(--space-2xs); }
+    .cs-hero__meta-label { font-family:var(--font-mono); font-size:var(--text-2xs); letter-spacing:var(--tracking-widest); text-transform:uppercase; color:var(--color-text-tertiary); }
+    .cs-hero__meta-value { font-size:var(--text-sm); color:var(--color-text-primary); font-weight:var(--weight-medium); }
+    .cs-section { padding:var(--space-7xl) 0; border-bottom:1px solid var(--color-border); }
+    .cs-section:last-child { border-bottom:none; }
+    .cs-section__header { margin-bottom:var(--space-3xl); }
+    .cs-section__body { max-width:720px; }
+    .cs-section__body p { font-size:var(--text-base); color:var(--color-text-secondary); line-height:var(--leading-relaxed); margin-bottom:var(--space-lg); }
+    .cs-section__body p:last-child { margin-bottom:0; }
+    .cs-tag-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(160px, 1fr)); gap:var(--space-sm); }
+    .cs-tag-grid .tag { display:flex; justify-content:center; padding:var(--space-md) var(--space-lg); }
+    @media (max-width:768px) { .cs-hero__title { font-size:var(--text-display-s); } .cs-hero__meta { flex-direction:column; align-items:flex-start; gap:var(--space-lg); } .cs-tag-grid { grid-template-columns:1fr 1fr; } }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">Ahmad Fiqi Efendi</a>
+      <div class="nav__links"><a href="/" class="nav__link">Home</a><a href="/about.html" class="nav__link">About</a><a href="/experience.html" class="nav__link">Experience</a><a href="/projects.html" class="nav__link is-active">Projects</a><a href="/skills.html" class="nav__link">Skills</a><a href="/education.html" class="nav__link">Education</a></div>
+      <div class="nav__right">
+        <div class="nav__social">
+          <a href="https://www.linkedin.com/in/fiqi-efendi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+          <a href="https://github.com/Fiqiefendiahmad" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+        </div>
+        <a href="/contact.html" class="nav__cta">Download CV</a>
+      </div>
+      <button class="nav__toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="nav__mobile" role="navigation" aria-label="Mobile navigation">
+    <a href="/">Home</a><a href="/about.html">About</a><a href="/experience.html">Experience</a>
+    <a href="/projects.html" class="is-active">Projects</a><a href="/skills.html">Skills</a><a href="/education.html">Education</a>
+    <div class="nav__mobile-divider"></div><a href="/contact.html">Contact</a>
+    <div class="nav__mobile-socials"><a href="https://www.linkedin.com/in/fiqi-efendi" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/Fiqiefendiahmad" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://youtube.com/@mrk_studio" target="_blank" rel="noopener noreferrer">YouTube</a><a href="https://x.com/fiqiiiiiiiiiii" target="_blank" rel="noopener noreferrer">X</a></div>
+  </div>
+
+  <main id="main-content">
+    <section class="cs-hero">
+      <div class="container">
+        <div class="breadcrumb reveal"><a href="/projects.html">Projects</a><span class="breadcrumb__sep">/</span><span>Room Management Application</span></div>
+        <span class="cs-hero__label reveal">Management / Extracurricular</span>
+        <h1 class="cs-hero__title reveal">Room Management Application</h1>
+        <div class="cs-hero__meta reveal">
+          <div class="cs-hero__meta-item"><span class="cs-hero__meta-label">Category</span><span class="cs-hero__meta-value">Management / Extracurricular</span></div>
+          <div class="cs-hero__meta-item"><span class="cs-hero__meta-label">Type</span><span class="cs-hero__meta-value">Android Application</span></div>
+          <div class="cs-hero__meta-item"><span class="cs-hero__meta-label">Status</span><span class="status status--completed">COMPLETED</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="cs-section"><div class="container"><div class="cs-section__header reveal"><span class="section-number">01</span><span class="label">Overview</span></div><div class="cs-section__body reveal"><p>A room management application built for organizing extracurricular (ekskul) activities. It helps coordinators allocate and track rooms used by student clubs and activities, keeping schedules and usage clear in one place.</p></div></div></section>
+    <section class="cs-section"><div class="container"><div class="cs-section__header reveal"><span class="section-number">02</span><span class="label">Problem</span></div><div class="cs-section__body reveal"><p>Extracurricular activities often compete for limited rooms, leading to overlaps and confusion about who uses what space and when. Coordinators needed a simple way to manage room allocation for ekskul sessions without manual booking sheets.</p></div></div></section>
+    <section class="cs-section"><div class="container"><div class="cs-section__header reveal"><span class="section-number">03</span><span class="label">Solution</span></div><div class="cs-section__body reveal"><p>We built an Android application in Java focused on managing rooms for extracurricular activities — tracking assignments, availability, and usage so clubs and organizers can coordinate spaces efficiently. The scope is activity-room management, not hospitality or hotel booking.</p></div></div></section>
+    <section class="cs-section"><div class="container"><div class="cs-section__header reveal"><span class="section-number">04</span><span class="label">Technology</span></div><div class="cs-tag-grid reveal"><span class="tag tag--accent">Android</span><span class="tag tag--accent">Java</span></div></div></section>
+    <section class="cs-section"><div class="container"><div class="cs-section__header reveal"><span class="section-number">05</span><span class="label">Result</span></div><div class="cs-section__body reveal"><p>The application was completed and delivered, providing a practical tool for managing extracurricular room usage.</p></div></div></section>
+  </main>
+
+  <footer class="footer"><div class="container"><div class="footer__inner"><div class="footer__left"><div class="footer__name">Ahmad Fiqi Efendi</div><div class="footer__identity">IT Database Administrator<br>Android Developer<br>IT Project Lead</div></div><div class="footer__links"><div class="footer__col"><div class="footer__col-title">Navigation</div><a href="/">Home</a><a href="/about.html">About</a><a href="/experience.html">Experience</a><a href="/projects.html" class="is-active">Projects</a><a href="/skills.html">Skills</a><a href="/education.html">Education</a><a href="/contact.html">Contact</a></div></div></div><div class="footer__bottom"><span class="footer__copy">&copy; 2026 Ahmad Fiqi Efendi. All rights reserved.</span></div></div></footer>
+  <script src="../js/nav.js"></script><script src="../js/animations.js"></script>
+</body>
+</html>
