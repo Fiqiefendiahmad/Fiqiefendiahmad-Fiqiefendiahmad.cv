@@ -55,6 +55,30 @@
   ],
   "projects": [
     {
+      "title": "Madrasahku — Islamic Learning App",
+      "description": "Flutter web Islamic learning app (Shalat, Doa, Mahfudzot) with REST API backend. Live in production.",
+      "tech": "Flutter · Dart · GoRouter · REST API",
+      "url": "https://islamic.sadeyan.my.id/#/home"
+    },
+    {
+      "title": "Alufiliate — TikTok Affiliate Automation",
+      "description": "Automated TikTok affiliate video pipeline: Shopee scraper, Gemini script, Edge-TTS, 9:16 renderer.",
+      "tech": "Python · Gemini · Edge-TTS · REST API",
+      "url": "https://alufiliate.sadeyan.my.id"
+    },
+    {
+      "title": "POS Kok Online — Omnichannel POS",
+      "description": "Offline-first POS with two-way TikTok Shop + Shopee stock sync, webhooks and idempotency.",
+      "tech": "Node.js · Express · TikTok Shop · Shopee API",
+      "url": "https://poskoko.sadeyan.my.id/"
+    },
+    {
+      "title": "Jastip — Reservation Platform",
+      "description": "Jasa-titip reservation site: static frontend + Flask + SQLite + Telegram webhook.",
+      "tech": "Flask · SQLite · Telegram Bot · Nginx",
+      "url": "https://jastip.sadeyan.my.id/"
+    },
+    {
       "title": "Hystory — Android Application",
       "description": "Led development of a mobile application for PT. Turga Berkah Kubra, managing full lifecycle from architecture to production deployment.",
       "tech": "Kotlin · Android · REST API · Firebase · GCP · Docker"
