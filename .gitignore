@@ -1,0 +1,10 @@
+.env
+.env.linkedin
+.env.local
+!.env.example
+!.env.linkedin.example
+logs/
+backups/
+__pycache__/
+*.pyc
+.DS_Store
