@@ -46,107 +46,127 @@
     }
   ],
   "skills": [
-    { "category": "Databases", "items": "Oracle, MySQL, SQL, AWR, Performance Tuning" },
-    { "category": "Mobile", "items": "Android, Java, Kotlin, Flutter, Firebase" },
-    { "category": "Backend", "items": "Spring Boot, Python/Flask, Go, REST APIs" },
-    { "category": "Infrastructure", "items": "Linux, Ubuntu, Docker, GCP, Git, Nginx, Cloudflare Tunnel" },
-    { "category": "Web / Frontend", "items": "Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, HTML/CSS, Vanilla JS" },
-    { "category": "AI / Automation", "items": "Gemini, RAG, Langflow, Chroma, Telegram Bots" },
-    { "category": "Observability", "items": "Prometheus, Grafana, AWR, PgAdmin, PMM, Umami" },
-    { "category": "Languages", "items": "Kotlin, Java, Python, Go, JavaScript, SQL" }
+    { "category": "Databases", "items": "Oracle, MySQL, PostgreSQL, Redis, AWR, Performance Tuning, pgvector" },
+    { "category": "Mobile", "items": "Android, Java, Kotlin, Flutter, Firebase, Offline-First MVVM" },
+    { "category": "Backend", "items": "Spring Boot, Python/FastAPI, Node.js/Express, Go, REST APIs" },
+    { "category": "Infrastructure", "items": "Linux, Ubuntu, Docker, GCP, Git, Nginx, Cloudflare Tunnel, systemd, cgroups" },
+    { "category": "Web / Frontend", "items": "Next.js 15/16, React, TypeScript, Tailwind CSS, Prisma, NextAuth v5, Vanilla JS" },
+    { "category": "AI / Automation", "items": "Gemini API, RAG, Langflow, Chroma, Edge-TTS, Telegram Bots" },
+    { "category": "Observability", "items": "Netdata, Uptime Kuma, Prometheus, Grafana, AWR, PgAdmin" },
+    { "category": "Languages", "items": "Kotlin, Java, Python, TypeScript, JavaScript, SQL, Dart, Go, Bash" }
   ],
   "projects": [
     {
+      "title": "WIYATA — Database Learning Center & Playground",
+      "description": "Interactive database engineering education platform with Next.js 15 frontend and FastAPI runner executing live SQL sandboxes for PostgreSQL, MySQL 8.0, and Redis.",
+      "tech": "Next.js · TypeScript · FastAPI · PostgreSQL · MySQL · Redis · pgvector",
+      "url": "https://wiyata.sadeyan.my.id"
+    },
+    {
+      "title": "FMML — Family Money Management",
+      "description": "Mobile-friendly full-stack family finance and budgeting platform: Next.js + TypeScript + Prisma + NextAuth v5 + PostgreSQL 16. Live at fmml.sadeyan.my.id.",
+      "tech": "Next.js · TypeScript · PostgreSQL · Prisma · NextAuth v5 · Tailwind CSS",
+      "url": "https://fmml.sadeyan.my.id/"
+    },
+    {
       "title": "Madrasahku — Islamic Learning App",
-      "description": "Flutter web Islamic learning app (Shalat, Doa, Mahfudzot) with REST API backend. Live in production.",
-      "tech": "Flutter · Dart · GoRouter · REST API",
+      "description": "Flutter web Islamic learning platform (Shalat, Doa, Mahfudzot) with high-concurrency Dart Shelf REST API backend. Live in production.",
+      "tech": "Flutter · Dart Shelf · GoRouter · REST API",
       "url": "https://islamic.sadeyan.my.id/#/home"
     },
     {
       "title": "Alufiliate — TikTok Affiliate Automation",
-      "description": "Automated TikTok affiliate video pipeline: Shopee scraper, Gemini script, Edge-TTS, 9:16 renderer.",
+      "description": "Automated video generation pipeline: product data extraction, AI scripting via Gemini API, Edge-TTS synthesis, and 9:16 video compilation.",
       "tech": "Python · Gemini · Edge-TTS · REST API",
       "url": "https://alufiliate.sadeyan.my.id"
     },
     {
       "title": "POS Kok Online — Omnichannel POS",
-      "description": "Offline-first POS with two-way TikTok Shop + Shopee stock sync, webhooks and idempotency.",
+      "description": "Offline-first POS cashiering platform with real-time two-way TikTok Shop + Shopee stock synchronization, webhooks, and idempotency control.",
       "tech": "Node.js · Express · TikTok Shop · Shopee API",
       "url": "https://poskoko.sadeyan.my.id/"
     },
     {
-      "title": "Jastip — Reservation Platform",
-      "description": "Jasa-titip reservation site: static frontend + Flask + SQLite + Telegram webhook.",
-      "tech": "Flask · SQLite · Telegram Bot · Nginx",
-      "url": "https://jastip.sadeyan.my.id/"
+      "title": "WarposKok — Restaurant POS & Kitchen Display",
+      "description": "Comprehensive restaurant operations platform: order taking, bill splitting, kitchen display workflows, and shift reporting.",
+      "tech": "Node.js · Express · REST API · PostgreSQL",
+      "url": "https://warposkok.sadeyan.my.id/"
     },
     {
-      "title": "Hystory — Android Application",
-      "description": "Led development of a mobile application for PT. Turga Berkah Kubra, managing full lifecycle from architecture to production deployment.",
-      "tech": "Kotlin · Android · REST API · Firebase · GCP · Docker"
-    },
-    {
-      "title": "Tan Malaka AI — RAG Research Assistant",
-      "description": "Built a historical research assistant using RAG architecture with vector embeddings and Gemini for grounded, source-backed answers.",
-      "tech": "Langflow · Gemini · RAG · Chroma · Embeddings"
-    },
-    {
-      "title": "Election Result Tracking — Android App",
-      "description": "Real-time election result tracking application with live data feeds and interactive dashboards.",
-      "tech": "Android · Java · REST API"
-    },
-    {
-      "title": "iWash Laundry Services — Mobile App",
-      "description": "On-demand laundry service platform with order tracking, payment integration, and real-time notifications.",
-      "tech": "Android · Backend API · Firebase"
-    },
-    {
-      "title": "WIYATA — Database Learning Center",
-      "description": "Built a self-service database knowledge platform: interactive learning center plus FastAPI backend with PostgreSQL-backed course content, quizzes, and vector search.",
-      "tech": "Next.js · TypeScript · FastAPI · PostgreSQL · Redis · pgvector"
-    },
-    {
-      "title": "Career Radar — Job Hunting Engine",
-      "description": "Automated job discovery, application tracking, and Telegram milestone alerts across multiple job aggregators.",
-      "tech": "Python · Flask · SQLite · Telegram Bot"
-    },
-    {
-      "title": "FMML — Family Money Management",
-      "description": "Mobile-friendly full-stack family finance app: Next.js + TypeScript + Prisma + NextAuth, PostgreSQL-backed budgeting, savings goals, and expense tracking. Live at fmml.sadeyan.my.id.",
-      "tech": "Next.js · TypeScript · PostgreSQL · Prisma · NextAuth v5 · Tailwind CSS",
-      "url": "https://fmml.sadeyan.my.id/"
-    },
-    {
-      "title": "Command Center — FMML Admin Platform",
-      "description": "Central administration platform for the FMML ecosystem (POS Kok Online + FMML Family). Next.js 16 + Prisma 6 + NextAuth v5 + PostgreSQL 17, deployed at cmc.sadeyan.my.id.",
+      "title": "Command Center — Fleet Administration Platform",
+      "description": "Central management console for the Sadeyan fleet (POS Kok Online + FMML Family). Built with Next.js 16 + Prisma 6 + NextAuth v5 + PostgreSQL 17.",
       "tech": "Next.js 16 · TypeScript · Prisma 6 · PostgreSQL 17 · NextAuth v5",
       "url": "https://cmc.sadeyan.my.id"
     },
     {
-      "title": "WarposKok — Restaurant POS",
-      "description": "Restaurant operations platform: order management, menu handling, kitchen display workflows, and reporting. Part of the Sadeyan ecosystem.",
-      "tech": "Node.js · Express · REST API · PostgreSQL"
+      "title": "Netdata — Grouped Observability & Telemetry Engine",
+      "description": "Real-time infrastructure observability dashboard tracking 40+ systemd services, Linux cgroups, and Docker database clusters with custom high-DPI canvas charting and live PSI pressure metrics.",
+      "tech": "Netdata Agent · JavaScript · Canvas API · systemd · cgroups · Nginx",
+      "url": "https://netdata.sadeyan.my.id/"
     },
     {
-      "title": "Dash — Homelab Startpage",
-      "description": "Single-file static startpage linking every live service in the sadeyan.my.id homelab — no framework, no build step, zero JS dependencies.",
+      "title": "Sadeyan Homelab Command Dashboard",
+      "description": "Single-pane-of-glass homelab command dashboard featuring keyboard spotlight search, category filtering, and direct links to 17 active services.",
       "tech": "HTML5 · CSS3 · Vanilla JS",
       "url": "https://dash.sadeyan.my.id"
     },
     {
-      "title": "Live Chat Widget — AI Chat Embed",
-      "description": "Embeddable AI chat widget powered by Cloudflare Workers and Llama 3.1, with intelligent theming, Wikipedia integration, and customizable persona.",
-      "tech": "Cloudflare Workers · Llama 3.1 · TypeScript · KV",
-      "url": "https://chat.sadeyan.my.id"
+      "title": "Jastip Megilan — Reservation Platform",
+      "description": "Personal shopper and logistics reservation portal: static frontend + Flask API + SQLite + Telegram webhook notification dispatcher.",
+      "tech": "Flask · SQLite · Telegram Bot · Nginx",
+      "url": "https://jastip.sadeyan.my.id/"
     },
     {
-      "title": "Pi-hole Phone Ad-Blocking & Monitoring",
-      "description": "Aggressive mobile-focused blocklists, custom tracker blacklists, regex telemetry filters, and a real-time per-device query monitor with JSON export.",
-      "tech": "Bash · SQLite · Pi-hole FTL · Gravity · Tailscale"
+      "title": "Reward Engine — Customer Loyalty API",
+      "description": "High-throughput customer reward calculation, voucher redemption pipeline, and points ledger API with Redis caching and PostgreSQL persistence.",
+      "tech": "Node.js · Express · PostgreSQL · Redis · REST API",
+      "url": "https://reward.sadeyan.my.id/"
+    },
+    {
+      "title": "Career Radar — Talent & Recruitment Portal",
+      "description": "Automated job discovery, candidate application tracking, and Telegram milestone alerts across multiple aggregators. Live at career.sadeyan.my.id.",
+      "tech": "Python · Flask · SQLite · Telegram Bot · REST API",
+      "url": "https://career.sadeyan.my.id/"
+    },
+    {
+      "title": "Hystory — Android Application",
+      "description": "Led development of a mobile application for PT. Turga Berkah Kubra, managing full lifecycle from architecture to production deployment on Google Play.",
+      "tech": "Kotlin · Android · REST API · Firebase · GCP · Docker"
+    },
+    {
+      "title": "Tan Malaka AI — RAG Research Assistant",
+      "description": "Historical research assistant using Retrieval-Augmented Generation (RAG) with vector embeddings and Gemini API for grounded, source-backed answers.",
+      "tech": "Langflow · Gemini · RAG · Chroma · Embeddings"
+    },
+    {
+      "title": "Election Result Tracking — Android App",
+      "description": "Real-time election vote tabulation and verification mobile app with live data feeds, offline persistence, and interactive visualization.",
+      "tech": "Android · Java · REST API · SQLite"
+    },
+    {
+      "title": "iWash Laundry Services — Mobile App",
+      "description": "On-demand laundry service booking platform with order stage tracking, pricing calculator, and Firebase real-time notifications.",
+      "tech": "Android · Java · Firebase · REST API"
+    },
+    {
+      "title": "Educational Mobile Applications for Madrasah / Yayasan",
+      "description": "Suite of mobile learning tools with curriculum modules, prayer guidance, and student progress synchronizing to cloud backends.",
+      "tech": "Java · Kotlin · Firebase · REST APIs"
+    },
+    {
+      "title": "Room Management Application",
+      "description": "Android application for facility booking, room availability calendars, and staff scheduling with automated clash prevention.",
+      "tech": "Android · Java · SQLite · REST API"
+    },
+    {
+      "title": "Pi-hole Network Sinkhole & DNS Telemetry",
+      "description": "Aggressive mobile-focused blocklists, custom tracker blacklists, regex telemetry filters, and real-time per-device query analytics with JSON export.",
+      "tech": "Bash · SQLite · Pi-hole FTL · Gravity · Tailscale",
+      "url": "https://pihole.sadeyan.my.id/admin"
     },
     {
       "title": "Oracle DBA Take Home Test",
-      "description": "Completed Oracle database administration assessment covering performance tuning, backup/recovery, and high availability scenarios.",
+      "description": "Enterprise Oracle database administration assessment covering performance tuning, AWR diagnosis, RMAN backup/recovery, and high availability scenarios.",
       "tech": "Oracle · SQL · AWR · RMAN"
     }
   ],

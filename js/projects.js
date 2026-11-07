@@ -18,12 +18,13 @@
       }
       this.classList.add('is-active');
 
-      /* Filter cards */
+      /* Filter cards (supports space-separated categories) */
       for (var k = 0; k < projectCards.length; k++) {
         var card = projectCards[k];
-        var category = card.getAttribute('data-category');
+        var categoryAttr = card.getAttribute('data-category') || '';
+        var categories = categoryAttr.toLowerCase().split(/\s+/);
 
-        if (filter === 'all' || category === filter) {
+        if (filter === 'all' || categories.indexOf(filter.toLowerCase()) !== -1) {
           card.style.display = '';
           card.style.opacity = '0';
           card.style.transform = 'translateY(10px)';
