@@ -109,6 +109,45 @@
       "title": "Career Radar — Job Hunting Engine",
       "description": "Automated job discovery, application tracking, and Telegram milestone alerts across multiple job aggregators.",
       "tech": "Python · Flask · SQLite · Telegram Bot"
+    },
+    {
+      "title": "FMML — Family Money Management",
+      "description": "Mobile-friendly full-stack family finance app: Next.js + TypeScript + Prisma + NextAuth, PostgreSQL-backed budgeting, savings goals, and expense tracking. Live at fmml.sadeyan.my.id.",
+      "tech": "Next.js · TypeScript · PostgreSQL · Prisma · NextAuth v5 · Tailwind CSS",
+      "url": "https://fmml.sadeyan.my.id/"
+    },
+    {
+      "title": "Command Center — FMML Admin Platform",
+      "description": "Central administration platform for the FMML ecosystem (POS Kok Online + FMML Family). Next.js 16 + Prisma 6 + NextAuth v5 + PostgreSQL 17, deployed at cmc.sadeyan.my.id.",
+      "tech": "Next.js 16 · TypeScript · Prisma 6 · PostgreSQL 17 · NextAuth v5",
+      "url": "https://cmc.sadeyan.my.id"
+    },
+    {
+      "title": "WarposKok — Restaurant POS",
+      "description": "Restaurant operations platform: order management, menu handling, kitchen display workflows, and reporting. Part of the Sadeyan ecosystem.",
+      "tech": "Node.js · Express · REST API · PostgreSQL"
+    },
+    {
+      "title": "Dash — Homelab Startpage",
+      "description": "Single-file static startpage linking every live service in the sadeyan.my.id homelab — no framework, no build step, zero JS dependencies.",
+      "tech": "HTML5 · CSS3 · Vanilla JS",
+      "url": "https://dash.sadeyan.my.id"
+    },
+    {
+      "title": "Live Chat Widget — AI Chat Embed",
+      "description": "Embeddable AI chat widget powered by Cloudflare Workers and Llama 3.1, with intelligent theming, Wikipedia integration, and customizable persona.",
+      "tech": "Cloudflare Workers · Llama 3.1 · TypeScript · KV",
+      "url": "https://chat.sadeyan.my.id"
+    },
+    {
+      "title": "Pi-hole Phone Ad-Blocking & Monitoring",
+      "description": "Aggressive mobile-focused blocklists, custom tracker blacklists, regex telemetry filters, and a real-time per-device query monitor with JSON export.",
+      "tech": "Bash · SQLite · Pi-hole FTL · Gravity · Tailscale"
+    },
+    {
+      "title": "Oracle DBA Take Home Test",
+      "description": "Completed Oracle database administration assessment covering performance tuning, backup/recovery, and high availability scenarios.",
+      "tech": "Oracle · SQL · AWR · RMAN"
     }
   ],
   "education": [
