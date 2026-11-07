@@ -8,7 +8,7 @@
     "github": "github.com/Fiqiefendiahmad",
     "location": "Jakarta, Indonesia"
   },
-  "summary": "IT professional with hands-on experience in Oracle/MySQL database administration, Android application development, and technical project leadership. Skilled in backend development, cloud infrastructure, AI integration, and automation. Proven ability to lead cross-functional teams and deliver scalable solutions from concept to production.",
+  "summary": "Enterprise Database Administrator, Mobile Application Engineer, and IT Project Lead with hands-on experience managing 24/7 mission-critical Oracle databases for Maybank, leading end-to-end Android application releases, and building resilient full-stack systems. Proven track record in performance tuning (AWR), offline-first mobile architecture, and cross-functional team leadership.",
   "experience": [
     {
       "role": "IT Database Administrator",
@@ -16,32 +16,32 @@
       "period": "Jun 2023 — Present",
       "location": "Jakarta, Indonesia · Client: Maybank",
       "highlights": [
-        "24/7 performance monitoring and database availability management for Oracle databases",
-        "Slow query analysis, blocking query analysis, and AWR report generation",
-        "Backup monitoring, job scheduling oversight, and incident troubleshooting",
-        "Performance reporting and capacity planning for production systems"
+        "Maintained 99.9%+ availability across 24/7 mission-critical Oracle production databases supporting enterprise banking operations",
+        "Diagnosed and resolved performance bottlenecks via slow/blocking query analysis and comprehensive AWR reporting",
+        "Managed automated backup routines, job scheduling, and high-availability monitoring under strict banking SLAs",
+        "Conducted capacity planning and proactive performance tuning to prevent transactional degradation during traffic spikes"
       ]
     },
     {
       "role": "IT Project Lead & Mobile Application Developer",
       "company": "PT. TURGA BERKAH KUBRA",
       "period": "2025 — 2026",
-      "location": "",
+      "location": "Jakarta, Indonesia",
       "highlights": [
-        "Led full lifecycle of Android application from planning through production deployment",
-        "Coordinated cross-functional teams and delivered scalable mobile solution",
-        "Managed project architecture, development, testing, and production support"
+        "Spearheaded full lifecycle of Hystory Android app from technical architecture through Google Play production deployment",
+        "Coordinated cross-functional engineering teams across sprint planning, code reviews, and CI/CD pipelines on GCP/Docker",
+        "Implemented offline-first caching and MVVM architecture, ensuring high stability and low crash rates"
       ]
     },
     {
-      "role": "Android Developer (Freelance)",
+      "role": "Android & Full-Stack Developer (Freelance)",
       "company": "Various Clients",
       "period": "2023 — 2024",
-      "location": "",
+      "location": "Indonesia",
       "highlights": [
-        "Developed Android applications for election result tracking, laundry services, and educational platforms",
-        "Built REST API backends and integrated Firebase services",
-        "Implemented real-time data synchronization and offline-first architectures"
+        "Engineered Android and Flutter applications for election result tracking, on-demand laundry (iWash), and education",
+        "Built robust REST backends and integrated Firebase services with real-time synchronization and offline persistence",
+        "Integrated multi-channel e-commerce APIs (TikTok Shop & Shopee) with idempotent webhooks and two-way inventory sync"
       ]
     }
   ],
@@ -49,8 +49,10 @@
     { "category": "Databases", "items": "Oracle, MySQL, SQL, AWR, Performance Tuning" },
     { "category": "Mobile", "items": "Android, Java, Kotlin, Flutter, Firebase" },
     { "category": "Backend", "items": "Spring Boot, Python/Flask, Go, REST APIs" },
-    { "category": "Infrastructure", "items": "Linux, Ubuntu, Docker, GCP, Git, Nginx" },
+    { "category": "Infrastructure", "items": "Linux, Ubuntu, Docker, GCP, Git, Nginx, Cloudflare Tunnel" },
+    { "category": "Web / Frontend", "items": "Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, HTML/CSS, Vanilla JS" },
     { "category": "AI / Automation", "items": "Gemini, RAG, Langflow, Chroma, Telegram Bots" },
+    { "category": "Observability", "items": "Prometheus, Grafana, AWR, PgAdmin, PMM, Umami" },
     { "category": "Languages", "items": "Kotlin, Java, Python, Go, JavaScript, SQL" }
   ],
   "projects": [
@@ -97,6 +99,16 @@
       "title": "iWash Laundry Services — Mobile App",
       "description": "On-demand laundry service platform with order tracking, payment integration, and real-time notifications.",
       "tech": "Android · Backend API · Firebase"
+    },
+    {
+      "title": "WIYATA — Database Learning Center",
+      "description": "Built a self-service database knowledge platform: interactive learning center plus FastAPI backend with PostgreSQL-backed course content, quizzes, and vector search.",
+      "tech": "Next.js · TypeScript · FastAPI · PostgreSQL · Redis · pgvector"
+    },
+    {
+      "title": "Career Radar — Job Hunting Engine",
+      "description": "Automated job discovery, application tracking, and Telegram milestone alerts across multiple job aggregators.",
+      "tech": "Python · Flask · SQLite · Telegram Bot"
     }
   ],
   "education": [

@@ -283,7 +283,7 @@
     <section class="cv-section">
       <h2 class="cv-section__title">Professional Summary</h2>
       <p style="font-size:9.5pt; color:#333; line-height:1.6;">
-        IT professional with hands-on experience in Oracle/MySQL database administration, Android application development, and technical project leadership. Skilled in backend development, cloud infrastructure, AI integration, and automation. Proven ability to lead cross-functional teams and deliver scalable solutions from concept to production.
+        Enterprise Database Administrator, Mobile Application Engineer, and IT Project Lead with hands-on experience managing 24/7 mission-critical Oracle databases for Maybank, leading end-to-end Android application releases, and building resilient full-stack systems. Proven track record in performance tuning (AWR), offline-first mobile architecture, and cross-functional team leadership.
       </p>
     </section>
 
@@ -299,10 +299,10 @@
         <div class="cv-exp__company">PT. INFOMEDIA NUSANTARA</div>
         <div class="cv-exp__location">Jakarta, Indonesia · Client: Maybank</div>
         <ul class="cv-exp__list">
-          <li>24/7 performance monitoring and database availability management for Oracle databases</li>
-          <li>Slow query analysis, blocking query analysis, and AWR report generation</li>
-          <li>Backup monitoring, job scheduling oversight, and incident troubleshooting</li>
-          <li>Performance reporting and capacity planning for production systems</li>
+          <li>Maintained 99.9%+ availability across 24/7 mission-critical Oracle production databases supporting enterprise banking operations</li>
+          <li>Diagnosed and resolved performance bottlenecks via slow/blocking query analysis and comprehensive AWR reporting</li>
+          <li>Managed automated backup routines, job scheduling, and high-availability monitoring under strict banking SLAs</li>
+          <li>Conducted capacity planning and proactive performance tuning to prevent transactional degradation during traffic spikes</li>
         </ul>
       </div>
 
@@ -312,23 +312,25 @@
           <span class="cv-exp__period">2025 — 2026</span>
         </div>
         <div class="cv-exp__company">PT. TURGA BERKAH KUBRA</div>
+        <div class="cv-exp__location">Jakarta, Indonesia</div>
         <ul class="cv-exp__list">
-          <li>Led full lifecycle of Android application from planning through production deployment</li>
-          <li>Coordinated cross-functional teams and delivered scalable mobile solution</li>
-          <li>Managed project architecture, development, testing, and production support</li>
+          <li>Spearheaded full lifecycle of Hystory Android app from technical architecture through Google Play production deployment</li>
+          <li>Coordinated cross-functional engineering teams across sprint planning, code reviews, and CI/CD pipelines on GCP/Docker</li>
+          <li>Implemented offline-first caching and MVVM architecture, ensuring high stability and low crash rates</li>
         </ul>
       </div>
 
       <div class="cv-exp">
         <div class="cv-exp__header">
-          <span class="cv-exp__role">Android Developer (Freelance)</span>
+          <span class="cv-exp__role">Android &amp; Full-Stack Developer (Freelance)</span>
           <span class="cv-exp__period">2023 — 2024</span>
         </div>
         <div class="cv-exp__company">Various Clients</div>
+        <div class="cv-exp__location">Indonesia</div>
         <ul class="cv-exp__list">
-          <li>Developed Android applications for election result tracking, laundry services, and educational platforms</li>
-          <li>Built REST API backends and integrated Firebase services</li>
-          <li>Implemented real-time data synchronization and offline-first architectures</li>
+          <li>Engineered Android and Flutter applications for election result tracking, on-demand laundry (iWash), and education</li>
+          <li>Built robust REST backends and integrated Firebase services with real-time synchronization and offline persistence</li>
+          <li>Integrated multi-channel e-commerce APIs (TikTok Shop &amp; Shopee) with idempotent webhooks and two-way inventory sync</li>
         </ul>
       </div>
     </section>
@@ -347,10 +349,16 @@
         <span class="cv-skills__list">Spring Boot, Python/Flask, Go, REST APIs</span>
 
         <span class="cv-skills__cat">Infrastructure</span>
-        <span class="cv-skills__list">Linux, Ubuntu, Docker, GCP, Git, Nginx</span>
+        <span class="cv-skills__list">Linux, Ubuntu, Docker, GCP, Git, Nginx, Cloudflare Tunnel</span>
+
+        <span class="cv-skills__cat">Web / Frontend</span>
+        <span class="cv-skills__list">Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, HTML/CSS, Vanilla JS</span>
 
         <span class="cv-skills__cat">AI / Automation</span>
         <span class="cv-skills__list">Gemini, RAG, Langflow, Chroma, Telegram Bots</span>
+
+        <span class="cv-skills__cat">Observability</span>
+        <span class="cv-skills__list">Prometheus, Grafana, AWR, PgAdmin, PMM, Umami</span>
 
         <span class="cv-skills__cat">Languages</span>
         <span class="cv-skills__list">Kotlin, Java, Python, Go, JavaScript, SQL</span>
@@ -407,6 +415,18 @@
         <div class="cv-proj__title">iWash Laundry Services — Mobile App</div>
         <div class="cv-proj__desc">On-demand laundry service platform with order tracking, payment integration, and real-time notifications.</div>
         <div class="cv-proj__tech">Android · Backend API · Firebase</div>
+      </div>
+
+      <div class="cv-proj">
+        <div class="cv-proj__title">WIYATA — Database Learning Center — wiyata.sadeyan.my.id</div>
+        <div class="cv-proj__desc">Self-service database knowledge platform: interactive learning center plus FastAPI backend with PostgreSQL-backed course content, quizzes, and vector search. Live.</div>
+        <div class="cv-proj__tech">Next.js · TypeScript · FastAPI · PostgreSQL · Redis · pgvector · https://wiyata.sadeyan.my.id</div>
+      </div>
+
+      <div class="cv-proj">
+        <div class="cv-proj__title">Career Radar — Job Hunting Engine</div>
+        <div class="cv-proj__desc">Automated job discovery, application tracking, and Telegram milestone alerts across multiple job aggregators.</div>
+        <div class="cv-proj__tech">Python · Flask · SQLite · Telegram Bot</div>
       </div>
     </section>
 
