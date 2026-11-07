@@ -120,13 +120,13 @@
       "title": "Reward Engine — Customer Loyalty API",
       "description": "High-throughput customer reward calculation, voucher redemption pipeline, and points ledger API with Redis caching and PostgreSQL persistence.",
       "tech": "Node.js · Express · PostgreSQL · Redis · REST API",
-      "url": "https://reward.sadeyan.my.id/"
+      "url": null
     },
     {
-      "title": "Career Radar — Talent & Recruitment Portal",
-      "description": "Automated job discovery, candidate application tracking, and Telegram milestone alerts across multiple aggregators. Live at career.sadeyan.my.id.",
+      "title": "Career Radar — Talent & Recruitment Tracker",
+      "description": "Automated job discovery, candidate application tracking, and Telegram milestone alerts across multiple aggregators. Open source on GitHub.",
       "tech": "Python · Flask · SQLite · Telegram Bot · REST API",
-      "url": "https://career.sadeyan.my.id/"
+      "url": "https://github.com/Fiqiefendiahmad/career-tracker"
     },
     {
       "title": "Hystory — Android Application",
